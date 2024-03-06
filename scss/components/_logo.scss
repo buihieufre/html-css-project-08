@@ -1,0 +1,11 @@
+
+.logo{
+    column-gap: 1.4rem;
+    &__text{
+        font-family: Gordita, sans-serif;
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 1.45; /* 145.455% */
+        color: var(--text-color);
+    }
+}
