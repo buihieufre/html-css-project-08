@@ -1,4 +1,4 @@
-
+@use "../abstracts";
 .logo{
     column-gap: 1.4rem;
     &__text{
@@ -8,4 +8,7 @@
         line-height: 1.45; /* 145.455% */
         color: var(--text-color);
     }
+        // @include abstracts.breakpoint(md) {
+        //     margin: 0 auto;
+        // }
 }

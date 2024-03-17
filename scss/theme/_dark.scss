@@ -1,0 +1,28 @@
+@use "../abstracts";
+
+html.dark {
+  --text-color: #fff;
+  --icon-color: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(150deg) brightness(103%) contrast(107%);
+  --body-bg: #292e39;
+  --header-bg-color: #171c28;
+  --top-act-group-bg-color: #292e39;
+  --top-act-group-shadow: rgba(0, 0, 0, 0.2);
+  --top-act-seperator-bg-color: #ededf6;
+  --top-act-avt-shadow: rgba(0, 0, 0, 0.08);
+
+  // Dropdown
+  @include abstracts.breakpoint(lg) {
+    --header-shadow: rgba(0, 0, 0, 0.20);
+  }
+
+  --drop-down-bg-color: #292e43;
+  --drop-down-shadow: rgba(23, 28, 40, 0.40);
+  --drop-down-arrow-color: brightness(0) saturate(100%) invert(12%) sepia(7%) saturate(4269%) hue-rotate(191deg) brightness(89%) contrast(81%);
+  ;
+  ;
+  --menu-column-icon: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7439%) hue-rotate(339deg) brightness(98%) contrast(116%);
+  --menu-column-heading: #B9BABE;
+  --menu-column-link: #B9BABE;
+  --menu-column-border: #171C28;
+
+}

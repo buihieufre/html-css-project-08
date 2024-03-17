@@ -1,0 +1,26 @@
+@use "../abstracts";
+
+html {
+  --text-color: #1a162e;
+  --icon-color: brightness(0) saturate(100%) invert(11%) sepia(39%) saturate(698%) hue-rotate(210deg) brightness(91%) contrast(102%);
+  --body-bg: #f6f6f6;
+  --header-bg-color: #eee;
+
+  @include abstracts.breakpoint(lg) {
+    --header-bg-color: #fff;
+    --header-shadow: rgba(237, 237, 246, 0.20);
+  }
+
+  --top-act-group-bg-color: #fff;
+  --top-act-group-shadow: rgba(237, 237, 246, 0.2);
+  --top-act-seperator-bg-color: #ededf6;
+  --top-act-avt-shadow: rgba(0, 0, 0, 0.08);
+  // Dropdown
+  --drop-down-bg-color: #fff;
+  --drop-down-shadow: rgba(200, 200, 200, 0.40);
+  --drop-down-arrow-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(346deg) brightness(102%) contrast(103%);
+  // menu-column
+  --menu-column-border: #D2D1D6;
+  --menu-column-heading: #1A162E;
+  --mobile-menu-bg-color: #fff;
+}

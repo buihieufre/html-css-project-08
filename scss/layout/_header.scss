@@ -1,98 +1,154 @@
+@use "../abstracts";
 
-.container-fluid{
-    background: #eee;
+.header {
+  background: var(--header-bg-color);
+  @include abstracts.breakpoint(sm) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  @include abstracts.breakpoint(lg) {
+    box-shadow:0px 20px 60px 10px var(--header-shadow) ;
+  }
+  
+}
+.top-bar,
+.logo,
+.navbar-inner,
+.top-act,
+.navbar__link {
+  display: flex;
+  align-items: center;
 }
 
-#header {
-    margin: 0 auto;
-    width: 1340px;
-}
-.top-bar, .logo, .navbar-inner, .top-act , .navbar__link{
-    display: flex;
-    align-items: center;
-}
+.top-bar {
+  @include abstracts.breakpoint(md) {
+    justify-content: space-between;
+  }
+  padding: 3rem 0;
+  position: relative;
+  &__more {
+    display: none;
+    @include abstracts.breakpoint(lg) {
+      display: block;
+      margin-right: 3.6rem;
+    }
 
-.top-bar{
-    padding: 3rem 0;
-}
-
-%heading-2 {
-
+    @include abstracts.breakpoint(md) {
+      margin-right: 0;
+    }
+  }
 }
 
 %top-bar-typho {
-    font-family: Gordita, sans-serif;
-    font-size: 1.5rem;
-    font-weight: 500;
-    line-height: 1.46; /* 146.667% */
+  font-family: Gordita, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.46; /* 146.667% */
 }
 
+.navbar-inner {
+  margin-left: 129px;
+  @include abstracts.breakpoint(xl) {
+    margin-left: 4.4rem;
+  }
+  @include abstracts.breakpoint(lg) {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    margin-left: 0;
+    background: var(--mobile-menu-bg-color);
+    z-index: 1;
+    inset: 0 50px 0 0;
+  }
 
-.navbar-inner{
-    column-gap: 3rem;
-    margin-left: 14.4rem;
-    .navbar__link {
-        color: var(--text-color);
-        @extend %top-bar-typho;
-        text-decoration: none;
-        column-gap: .6rem;
+  .navbar__link {
+    display: flex;
+    column-gap: 0.6rem;
+    height: 5rem;
+    padding: 0 15px;
+    color: var(--text-color);
+    text-decoration: none;
+    @extend %top-bar-typho;
+    @include abstracts.breakpoint(lg) {
+      justify-content: space-between;
     }
-    .nav-bar__arrow{
-        padding-top: 0.3rem;
+
+    // &:hover ~ .dropdown{
+    //   display: block;
+    // }
+  }
+  .nav-bar__arrow {
+    padding-top: 0.3rem;
+  }
+
+  .navbar__item{
+    @include abstracts.breakpoint(lg) {
+      width: 100%;
     }
+    &:hover .dropdown {
+      display: block;
+    }
+
+  }
 }
-
 
 .top-act {
-    column-gap: 2rem;
-    margin-left: auto;
-    *{
-        border-radius: 0.8rem;
-    }
-    &__group{
-        min-width: 5rem;
-        height: 5rem;
-        display: flex;
-        background: #fff;
-        box-shadow: 0 2rem 6rem 1rem rgba(237, 237, 246, 0.20);
-    }
-    &__btn{
-        display: flex;
-        align-items: center;
-        column-gap: 1rem;
-    }
+  column-gap: 2rem;
+  margin-left: auto;
+  @include abstracts.breakpoint(md) {
+    margin-left: 0;
+  }
+  * {
+    border-radius: 0.8rem;
+  }
+  &__group {
+    min-width: 5rem;
+    height: 5rem;
+    display: flex;
+    background: var(--top-act-group-bg-color);
+    box-shadow: 0 2rem 6rem 1rem var(--top-act-group-shadow);
 
-    &__btn:hover {
-        cursor: pointer;
+    @include abstracts.breakpoint(md) {
+      display: none;
     }
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+  }
 
-    &__text {
-        @extend %top-bar-typho;
-    }
+  &__btn:hover {
+    cursor: pointer;
+  }
 
-    &__search{
-        padding: 1.3rem;
-    }
+  &__text {
+    color: var(--text-color);
+    @extend %top-bar-typho;
+  }
 
-    &__seperator{
-        display: inline-block;
-        width: .1px;
-        height: 3rem;
-        background: #EDEDF6;
-        margin: 0 20px;
-    }
+  &__search {
+    padding: 1.3rem;
+  }
 
-    &__group-right{
-        padding: 1rem 2rem;
-    }
-    
-    &__avt{
-        display: block;
-        background: #DFD2FA;
-        width: 5rem;
-        height: 5rem;
-        box-shadow: 0 0.4rem 1.4rem 0.2rem rgba(0, 0, 0, 0.08);
-        cursor: pointer;
-    }
+  &__seperator {
+    display: inline-block;
+    width: 0.1px;
+    height: 3rem;
+    background: var(--top-act-seperator-bg-color);
+    margin: 0 20px;
+  }
 
+  &__group-right {
+    padding: 1rem 2rem;
+  }
+
+  &__avt {
+    display: block;
+    background: #dfd2fa;
+    width: 5rem;
+    height: 5rem;
+    box-shadow: 0 0.4rem 1.4rem 0.2rem var(top-act-avt-shadow);
+    cursor: pointer;
+  }
 }

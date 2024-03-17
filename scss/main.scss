@@ -1,4 +1,5 @@
 @use "./base";
+@use "./theme";
 @use "./abstracts" as var-;
 @use "./layout";
-@use "./components"
+@use "./components";

@@ -1,0 +1,19 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+@mixin breakpoint($br) {
+  $breakpoint: map-get($grid-breakpoints, $br);
+  @if ($breakpoint) {
+    @media (max-width: ($breakpoint - 0.02)) {
+        @content;
+    }
+  }@else {
+    @error "The value #{$br} is not in breakpoint list";
+  }
+}
