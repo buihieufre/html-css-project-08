@@ -1,6 +1,6 @@
 <div class="container">
     <div class="top-bar">
-        <div class="top-bar__more js-toggle" toggle-target="#navbar">
+        <div class="top-bar__more js-toggle d-lg-block" toggle-target="#navbar">
             <img src="./assets/icons/more.svg" alt="" class="icon top-bar__more-icon" />
         </div>
 
@@ -9,14 +9,24 @@
             <h2 class="logo__text">grocerymart</h2>
         </a>
         <nav class="navbar hide" id="navbar">
-            <button class="js-toggle" toggle-target="#navbar">
-                <img src="../assets/icons/navbar-close.svg" alt="" class="navbar-inner-close-btn">
+            <button class="js-toggle d-none d-lg-block" toggle-target="#navbar">
+                <img src="../assets/icons/navbar-close.svg" alt="" class="navbar-inner-close-btn d-lg-block icon">
             </button>
+            <a href="#!" class="nav-btn d-none d-lg-flex">
+                <img src="../assets/icons/cart.svg" alt="" class="icon">
+                <span class="nav-btn__card">Card</span>
+                <span class="nav-btn__stats">3</span>
+            </a>
+            <a href="#!" class="nav-btn d-none d-lg-flex">
+                <img src="../assets/icons/heart.svg" alt="" class="icon">
+                <span class="nav-btn__card">Favorite</span>
+                <span class="nav-btn__stats">3</span>
+            </a>
             <ul class="navbar-inner js-dropdown-list">
                 <li class="navbar__item">
                     <a href="#!" class="navbar__link">
                         Departments
-                        <img src="./assets/icons/arrow-down.svg" alt="" class="nav-bar__arrow icon" />
+                        <img src="./assets/icons/arrow-down.svg" alt="" class="navbar__arrow icon" />
                     </a>
                     <div class="dropdown js-dropdown">
                         <div class="dropdown__inner">
@@ -3507,7 +3517,7 @@
                 <li class="navbar__item">
                     <a href="#!" class="navbar__link">
                         Grocery
-                        <img src="./assets/icons/arrow-down.svg" alt="" class="nav-bar__arrow icon" />
+                        <img src="./assets/icons/arrow-down.svg" alt="" class="navbar__arrow icon" />
                     </a>
                     <div class="dropdown">
                         <div class="dropdown__inner">
@@ -3891,7 +3901,7 @@
                 <li class="navbar__item">
                     <a href="#!" class="navbar__link">
                         Beauty
-                        <img src="./assets/icons/arrow-down.svg" alt="" class="nav-bar__arrow icon" />
+                        <img src="./assets/icons/arrow-down.svg" alt="" class="navbar__arrow icon" />
                     </a>
                     <div class="dropdown">
                         <div class="dropdown__inner">
@@ -4207,12 +4217,12 @@
         </nav>
         <div class="navbar__overlay js-toggle" toggle-target="#navbar"></div>
         <div class="top-act">
-            <div class="top-act__group">
-                <button class="top-act__btn top-act__search">
+            <div class="top-act__group d-lg-none">
+                <button class="top-act__btn top-act__search d-lg-none">
                     <img src="./assets/icons/search.svg" alt="" class="top-act__icon icon" />
                 </button>
             </div>
-            <div class="top-act__group top-act__group-right">
+            <div class="top-act__group top-act__group-right d-md-none">
                 <button class="top-act__btn">
                     <img src="./assets/icons/heart.svg" alt="" class="top-act__icon icon" />
                     <span class="top-act__text">03</span>
