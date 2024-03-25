@@ -1,0 +1,31 @@
+@use "../abstracts";
+
+.home {
+    &__container {
+        margin: 40px 0;
+
+        @include abstracts.screen(md) {
+            margin: 30px 0;
+        }
+    }
+
+    &__heading {
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 1.41;
+        margin-bottom: 20px;
+    }
+
+    .home__cate {
+        --grid-gutter-x: 51px;
+
+        @include abstracts.screen(lg) {
+            --grid-gutter-x: 30px;
+        }
+
+        @include abstracts.screen(md) {
+            --grid-gutter-x: 30px;
+            --grid-gutter-y: 20px;
+        }
+    }
+}

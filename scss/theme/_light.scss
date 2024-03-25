@@ -6,25 +6,33 @@ html {
   --body-bg: #f6f6f6;
   --header-bg-color: #eee;
 
-  @include abstracts.breakpoint(lg) {
+@include abstracts.screen(lg) {
     --header-bg-color: #fff;
     --header-shadow: rgba(237, 237, 246, 0.20);
   }
 
-  --top-act-group-bg-color: #fff;
-  --top-act-group-shadow: rgba(237, 237, 246, 0.2);
-  --top-act-seperator-bg-color: #ededf6;
-  --top-act-avt-shadow: rgba(0, 0, 0, 0.08);
-  // Dropdown
-  --drop-down-bg-color: #fff;
-  --drop-down-shadow: rgba(200, 200, 200, 0.40);
-  --drop-down-arrow-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(346deg) brightness(102%) contrast(103%);
-  // menu-column
-  --menu-column-border: #D2D1D6;
-  --menu-column-heading: #1A162E;
+        --top-act-group-bg-color: #fff;
+        --top-act-group-shadow: rgba(237, 237, 246, 0.2);
+        --top-act-seperator-bg-color: #ededf6;
+        --top-act-avt-shadow: rgba(0, 0, 0, 0.08);
+        // Dropdown
+        --drop-down-bg-color: #fff;
+        --drop-down-shadow: rgba(200, 200, 200, 0.40);
+        --drop-down-arrow-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(346deg) brightness(102%) contrast(103%);
+        // menu-column
+        --menu-column-border: #D2D1D6;
+        --menu-column-heading: #1A162E;
 // Sidebar
-  --mobile-menu-bg-color: #fff;
+        --mobile-menu-bg-color: #fff;
     --side-bar-text-color: #1A162E;
     --side-bar-shadow : rgba(200, 200, 200, 0.40);
     // Slideshow
+    // Home-cate-item
+    --cate-item-thumb-wrapper: #fff;
+    --cate-item-color:#EEE;
+    --cate-item-heading:#000;
+
+    @include abstracts.screen(md) {
+        --cate-item-color: #fff;
+    }
 }

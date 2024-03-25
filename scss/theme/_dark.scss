@@ -11,7 +11,7 @@ html.dark {
   --top-act-avt-shadow: rgba(0, 0, 0, 0.08);
 
   // Dropdown
-  @include abstracts.breakpoint(lg) {
+  @include abstracts.screen(lg) {
     --header-shadow: rgba(0, 0, 0, 0.20);
   }
 
@@ -29,4 +29,8 @@ html.dark {
   --mobile-menu-bg-color:#292E39;
   --side-bar-text-color: #B9BABE;
   --side-bar-shadow : rgba(23, 28, 40, 0.40);
+// Home-cate-item
+--cate-item-thumb-wrapper: #292E39;
+--cate-item-color:#171C28;
+--cate-item-heading:#fff;
 }

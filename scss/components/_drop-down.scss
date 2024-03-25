@@ -8,7 +8,7 @@
     left: 0;
     padding-top: 5rem;
 
-    @include abstracts.breakpoint(lg) {
+    @include abstracts.screen(lg) {
         position: static;
         padding-top: 0;
         // overflow-y: auto;
@@ -22,7 +22,7 @@
         border-radius: 2rem;
         padding: var(--inner-padding-width);
         background: var(--drop-down-bg-color);
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
                 background: transparent;
                 box-shadow: none;
                 padding: 0;
@@ -38,7 +38,7 @@
             filter: var(--drop-down-arrow-color);
             left: var(--arrow-left-pos);
             transform: translate(-50%);
-            @include abstracts.breakpoint(lg) {
+            @include abstracts.screen(lg) {
                     display: none;
                 }
         }
@@ -51,7 +51,7 @@
     height: calc(var(--inner-height) - var(--inner-padding-width) * 2);
     display: flex;
     position: relative;
-    @include abstracts.breakpoint(lg){
+    @include abstracts.screen(lg) {
         height: auto;
     }
     &__main {
@@ -59,7 +59,7 @@
         width: var(--top-menu-main-width);
         border-right: 1px solid var(--menu-column-border);
         overflow-y: auto;
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
                 border-right-color: transparent;
                 width: 100%;
                 overflow-y: visible;
@@ -72,7 +72,7 @@
         position: absolute;
         inset: 0 0 0 var(--top-menu-main-width);
         overflow-y: auto;
-            @include abstracts.breakpoint(lg) {
+            @include abstracts.screen(lg) {
                     position: static;
                     overflow-y: visible;
                 }
@@ -81,7 +81,7 @@
             inset: 0;
             
         }
-        @include abstracts.breakpoint(lg){
+                @include abstracts.screen(lg) {
             width: 100%;
         }
     }
@@ -92,12 +92,12 @@
         grid-template-columns: repeat(3, calc(100% / 3 - var(--col-gap-width)));
         width: 100%;
         column-gap: var(--col-gap-width);
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
                 grid-template-columns: 1fr;
             }
         &--not-main {
             grid-template-columns: repeat(4, calc(100% / 4 - var(--col-gap-width)));
-            @include abstracts.breakpoint(lg){
+            @include abstracts.screen(lg) {
                 grid-template-columns: 1fr;
             }
         }
@@ -109,7 +109,7 @@
         flex-direction: column;
         row-gap: 20px;
         padding-left: 30px;
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
                 padding-left: 0;
                 row-gap: 0;
             }
@@ -121,7 +121,7 @@
     display: flex;
     column-gap: 14px;
 
-    @include abstracts.breakpoint(lg){
+    @include abstracts.screen(lg) {
         padding: 7px 0;
     }
 
@@ -130,7 +130,7 @@
         width: 36px;
         height: 36px;
         position: relative;
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             &--hidden{
                 display: none;
             }
@@ -172,7 +172,7 @@
         font-weight: 500;
         line-height: 1.5;
         color: var(--menu-column-heading);
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             display: block;
             margin-bottom: 14px;
             &--hidden {
@@ -184,13 +184,13 @@
 
     &__list {
         margin-top: 19px;
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
             margin-top: 0;
         }
     }   
     &__item-wrapper {
 
-        @include abstracts.breakpoint(lg) {
+        @include abstracts.screen(lg) {
                 display: flex;
                 flex-direction: column;
             }
