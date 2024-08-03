@@ -11,22 +11,22 @@ const $$ = document.querySelectorAll.bind(document);
  * </script>
  */
 function load(selector, path) {
-  const cached = localStorage.getItem(path);
-  if (cached) {
-    $(selector).innerHTML = cached;
-  }
+    const cached = localStorage.getItem(path);
+    if (cached) {
+        $(selector).innerHTML = cached;
+    }
 
-  fetch(path)
-    .then((res) => res.text())
-    .then((html) => {
-      if (html !== cached) {
-        $(selector).innerHTML = html;
-        localStorage.setItem(path, html);
-      }
-    })
-    .finally(() => {
-      window.dispatchEvent(new Event("template-loaded"));
-    });
+    fetch(path)
+        .then((res) => res.text())
+        .then((html) => {
+            if (html !== cached) {
+                $(selector).innerHTML = html;
+                localStorage.setItem(path, html);
+            }
+        })
+        .finally(() => {
+            window.dispatchEvent(new Event("template-loaded"));
+        });
 }
 
 /**
@@ -34,21 +34,21 @@ function load(selector, path) {
  * có bị ẩn bởi display: none không
  */
 function isHidden(element) {
-  if (!element) return true;
+    if (!element) return true;
 
-  if (window.getComputedStyle(element).display === "none") {
-    return true;
-  }
-
-  let parent = element.parentElement;
-  while (parent) {
-    if (window.getComputedStyle(parent).display === "none") {
-      return true;
+    if (window.getComputedStyle(element).display === "none") {
+        return true;
     }
-    parent = parent.parentElement;
-  }
 
-  return false;
+    let parent = element.parentElement;
+    while (parent) {
+        if (window.getComputedStyle(parent).display === "none") {
+            return true;
+        }
+        parent = parent.parentElement;
+    }
+
+    return false;
 }
 
 /**
@@ -56,13 +56,13 @@ function isHidden(element) {
  * sau một khoảng thời gian mới được thực thi
  */
 function debounce(func, timeout = 300) {
-  let timer;
-  return (...args) => {
-    clearTimeout(timer);
-    timer = setTimeout(() => {
-      func.apply(this, args);
-    }, timeout);
-  };
+    let timer;
+    return (...args) => {
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+            func.apply(this, args);
+        }, timeout);
+    };
 }
 
 /**
@@ -73,14 +73,14 @@ function debounce(func, timeout = 300) {
  * 2. CSS "left" cho arrow qua biến "--arrow-left-pos"
  */
 const calArrowPos = debounce(() => {
-  if (isHidden($(".js-dropdown-list"))) return;
+    if (isHidden($(".js-dropdown-list"))) return;
 
-  const items = $$(".js-dropdown-list > li");
+    const items = $$(".js-dropdown-list > li");
 
-  items.forEach((item) => {
-    const arrowPos = item.offsetLeft + item.offsetWidth / 2;
-    item.style.setProperty("--arrow-left-pos", `${arrowPos}px`);
-  });
+    items.forEach((item) => {
+        const arrowPos = item.offsetLeft + item.offsetWidth / 2;
+        item.style.setProperty("--arrow-left-pos", `${arrowPos}px`);
+    });
 });
 
 // Tính toán lại vị trí arrow khi resize trình duyệt
@@ -100,42 +100,46 @@ window.addEventListener("template-loaded", calArrowPos);
 window.addEventListener("template-loaded", handleActiveMenu);
 
 function handleActiveMenu() {
-  const dropdowns = $$(".js-dropdown");
-  const menus = $$(".js-menu-list");
-  const activeClass = "menu-column__item--active";
+    const dropdowns = $$(".js-dropdown");
+    const menus = $$(".js-menu-list");
+    const activeClass = "menu-column__item--active";
 
-  const removeActive = (menu) => {
-    menu.querySelector(`.${activeClass}`)?.classList.remove(activeClass);
-  };
+    const removeActive = (menu) => {
+        menu.querySelector(`.${activeClass}`)?.classList.remove(activeClass);
+    };
 
-  const init = () => {
-    menus.forEach((menu) => {
-      const items = menu.children;
-      if (!items.length) return;
+    const init = () => {
+        menus.forEach((menu) => {
+            const items = menu.children;
+            if (!items.length) return;
 
-      removeActive(menu);
-      if (window.innerWidth > 991) items[0].classList.add(activeClass);
-      Array.from(items).forEach((item) => {
-        item.onmouseenter = () => {
-          if (window.innerWidth <= 991) return;
-          removeActive(menu);
-          item.classList.add(activeClass);
-        };
-        item.onclick = () => {
-          if (window.innerWidth > 991) return;
-          removeActive(menu);
-          item.classList.add(activeClass);
-          item.scrollIntoView();
-        };
-      });
+            removeActive(menu);
+            if (window.innerWidth > 991) items[0].classList.add(activeClass);
+            Array.from(items).forEach((item) => {
+                item.onmouseenter = () => {
+                    if (window.innerWidth <= 991) return;
+                    removeActive(menu);
+                    item.classList.add(activeClass);
+                };
+                item.onclick = () => {
+                    if (window.innerWidth > 991) return;
+                    if (item.classList.contains(activeClass)) {
+                        item.closest("." + activeClass).classList.remove(activeClass);
+                        return;
+                    }
+                    removeActive(menu);
+                    item.classList.add(activeClass);
+                    item.scrollIntoView();
+                };
+            });
+        });
+    };
+
+    init();
+
+    dropdowns.forEach((dropdown) => {
+        dropdown.onmouseleave = () => init();
     });
-  };
-
-  init();
-
-  dropdowns.forEach((dropdown) => {
-    dropdown.onmouseleave = () => init();
-  });
 }
 
 /**
@@ -148,33 +152,93 @@ function handleActiveMenu() {
 window.addEventListener("template-loaded", initJsToggle);
 
 function initJsToggle() {
-  $$(".js-toggle").forEach((button) => {
-    const target = button.getAttribute("toggle-target");
-    if (!target) {
-      document.body.innerText = `Cần thêm toggle-target cho: ${button.outerHTML}`;
-    }
-    button.onclick = () => {
-      if (!$(target)) {
-        return (document.body.innerText = `Không tìm thấy phần tử "${target}"`);
-      }
-      const isHidden = $(target).classList.contains("hide");
+    $$(".js-toggle").forEach((button) => {
+        const target = button.getAttribute("toggle-target");
+        if (!target) {
+            document.body.innerText = `Cần thêm toggle-target cho: ${button.outerHTML}`;
+        }
+        button.onclick = () => {
+            if (!$(target)) {
+                return (document.body.innerText = `Không tìm thấy phần tử "${target}"`);
+            }
+            const isHidden = $(target).classList.contains("hide");
 
-      requestAnimationFrame(() => {
-        $(target).classList.toggle("hide", !isHidden);
-        $(target).classList.toggle("show", isHidden);
-      });
-    };
-  });
+            requestAnimationFrame(() => {
+                $(target).classList.toggle("hide", !isHidden);
+                $(target).classList.toggle("show", isHidden);
+            });
+        };
+    });
 }
 
 window.addEventListener("template-loaded", () => {
-  const links = $$(".js-dropdown-list > li > a");
+    const links = $$(".js-dropdown-list > li > a");
 
-  links.forEach((link) => {
-    link.onclick = () => {
-      if (window.innerWidth > 991) return;
-      const item = link.closest("li");
-      item.classList.toggle("navbar__item--active");
-    };
-  });
+    links.forEach((link) => {
+        link.onclick = () => {
+            if (window.innerWidth > 991) return;
+            const item = link.closest("li");
+            item.classList.toggle("navbar__item--active");
+        };
+    });
 });
+
+const displayGoToTop = debounce(() => {
+    const goTopBtn = $("#go-to-top");
+    if (goTopBtn) {
+        if (isEndOfScreen()) {
+            goTopBtn.classList.add("visable");
+        } else {
+            goTopBtn.classList.remove("visable");
+        }
+    }
+}, 1000);
+
+function isEndOfScreen() {
+    return window.innerHeight + window.pageYOffset >= document.body.offsetHeight;
+}
+window.onscroll = function () {
+    displayGoToTop();
+};
+
+const paginationBar = $(".auth__pagination-dot");
+const authIntro = $(".auth__intro");
+const authContent = $(".auth__content");
+const nextSlideBtn = $("#auth__next-page");
+console.log(screen.width);
+nextSlideBtn?.addEventListener("click", function () {
+    if (authIntro && authContent) {
+        authIntro.style.transform = `translateX(-${screen.width}px)`;
+        authContent.style.transform = `translateX(-${screen.width}px)`;
+        authIntro.classList.add("auth__next-slide");
+        authContent.classList.add("auth__next-slide");
+        paginationBar.classList.add("auth__hidden");
+    }
+});
+
+const checkoutCartItems = $$(".select");
+const dropdownCartItems= $$('.select__drop-down')
+
+if(checkoutCartItems){
+    checkoutCartItems.forEach(checkoutCartItem =>{
+        const dropdownCartItem = checkoutCartItem.querySelector('.select__drop-down')
+        if (dropdownCartItem) {
+            checkoutCartItem.onclick = () => {
+                dropdownCartItem.classList.toggle("select--d-flex");
+            };
+        }
+    })
+}
+
+if(dropdownCartItems){
+    dropdownCartItems.forEach(dropdownCartItem =>{
+        dropdownCartItem.onclick = (e) => {
+            const item = e.target;
+            const optionDefault = item.closest('#select').querySelector('#option-default')
+            if(item.matches('.select__option')){
+                optionDefault.innerText = item.innerText
+            }
+        }
+    })
+}
+

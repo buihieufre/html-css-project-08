@@ -1,0 +1,10 @@
+.message{
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px 20px;
+
+    &--success {
+        background: #6fc18366;
+        border: 1.5px solid #6fc183;
+    }
+}

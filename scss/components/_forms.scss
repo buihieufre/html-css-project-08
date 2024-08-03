@@ -1,0 +1,104 @@
+@use "../abstracts";
+
+.form{
+    &:has(.invalid){
+        .form__sign-up-btn{
+            opacity: 0.5;
+        }
+    }
+
+    &-group{
+        display: block;
+        width: 100%;
+        &.invalid{
+            .form-group__input {
+                background: rgba($color: #ff0000, $alpha: 0.1);
+            }
+            .form__message{
+                display: block;
+            }
+            & .input-label--normal {
+                display: none;
+            }
+
+            & .input-label--warning{
+                display: block;
+                animation: shake 0.5s;
+            }
+            
+        }
+        
+        &--inline{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex:1 0;
+            column-gap: 10px;
+            width: 100%;
+        }
+    }
+
+    &-group__input{
+        &:focus-within{
+            border: 2px solid #0071DC;
+        }
+        display: flex;
+        padding:12px;
+    }
+
+
+    &__label-wrapper{
+        width: 24px;
+        height: 24px;
+    }
+    .input-label--warning{
+        width: 24px;
+        display: none;
+    }
+    &__input{
+        color: var(--form-input);
+        width: 100%;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.44; /* 144.444% */
+        @include abstracts.screen(sm){
+            font-size: 1.6rem;
+            line-height: 1.5;
+        }
+    }
+
+    &__message{
+        display: none;
+        margin-top: 10px;
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: #F4364C;
+    }
+
+    &__input::placeholder {
+        color: var(--form-input-placeholder);
+    }
+    &__action-btn{
+        margin-top: 20px;
+        color: var(--form-action-btn);
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+
+    &__sign-in-btn *{
+        filter: var(--form-sign-in-btn);
+    }
+
+    &__label-default-user{
+        color: var(--form-default-user);
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.46; /* 146.667% */
+        @include abstracts.screen(sm){
+            font-size: 1.4rem;
+            line-height: 1.42;
+        }
+    }
+
+
+}

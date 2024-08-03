@@ -1,0 +1,131 @@
+@use "../abstracts";
+
+.product-row {
+    @include abstracts.screen(xl) {
+        --grid-gutter-x: 22px;
+    }
+
+    @include abstracts.screen(md) {
+        --grid-gutter-y: 30px;
+    }
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+    height: 100%;
+    padding: 16px;
+    border-radius: 20px;
+    box-shadow: 0px 20px 60px 10px var(--product-item-shadow);
+    background: var(--product-item-background);
+
+    &-img-wrapper {
+        position: relative;
+        width: 100%;
+        height: 98.5%;
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    &__heart-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border-radius: 50%;
+        background: var(--product-item-heart-wrapper-bg);
+        filter: drop-shadow(0px 20px 60px var(--product-item-heart-wrapper-shadow));
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    &__heart-wrapper:not(&__heart-wrapper--actived) &__heart--actived{
+        visibility: none;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    &__heart-wrapper:not(&__heart-wrapper--actived) &__heart{
+        visibility: visible;
+        width: auto;
+        height: auto;
+        opacity: 1;
+    }
+    &__heart-wrapper--actived &__heart {
+        display: none;
+    }
+    &__heart-wrapper--actived &__heart--actived{
+        display: block;
+    }
+
+
+    &__heart--actived {
+        margin-top: 6px;
+    }
+    &__heart--actived, &__heart{
+        position: absolute;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+
+        @include abstracts.screen(lg) {
+            row-gap: 8px;
+        }
+    }
+
+    &__heading {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient:  vertical;
+        overflow: hidden;
+        color: var(--product-item-heading);
+        font-weight: 500;
+        line-height: 1.5;
+    }
+
+    &__brand {
+        color: var(--product-item-brand);
+        font-size: 15px;
+        line-height: 1.46;
+    }
+
+    &-bottom {
+        display: flex;
+        align-items: center;
+    }
+
+    &__cost {
+        color: var(--product-item-cost);
+        font-weight: 500;
+        line-height: 1.5rem;
+        /* 150% */
+    }
+
+    &-rate {
+        display: flex;
+        margin-left: auto;
+        align-items: center;
+        gap: 6px;
+
+        &__text {
+            color: var(--product-item-cost);
+            font-weight: 500;
+            line-height: 1.5rem;
+        }
+    }
+
+}

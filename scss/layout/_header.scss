@@ -38,6 +38,16 @@
       margin-right: 0;
     }
   }
+
+  &__logo{
+    @include abstracts.screen(lg){
+      position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    }
+  }
+  
 }
 
 %top-bar-typho {
@@ -123,7 +133,6 @@
     flex-direction: column;
     margin-left: 0;
     overflow-y: auto;
-    // overflow-y: auto;
     height: calc(100% - 160px);
     }
     
@@ -156,7 +165,7 @@
     // &:hover ~ .dropdown{
     //   display: block;
     // }
-                                                                                                                                }
+}
 
   .navbar__item{
     &:hover .dropdown {
@@ -207,6 +216,10 @@
 
   &__btn:hover {
     cursor: pointer;
+  }
+
+  &__sign-in{
+    color: var(--header-sign-in-btn);
   }
 
   &__text {

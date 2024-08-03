@@ -11,7 +11,7 @@
     @include abstracts.screen(lg) {
         position: static;
         padding-top: 0;
-        // overflow-y: auto;
+        overflow-y: auto;
     }
 
     &__inner {
@@ -51,9 +51,11 @@
     height: calc(var(--inner-height) - var(--inner-padding-width) * 2);
     display: flex;
     position: relative;
+    
     @include abstracts.screen(lg) {
         height: auto;
     }
+
     &__main {
         height: inherit;
         width: var(--top-menu-main-width);
@@ -81,7 +83,7 @@
             inset: 0;
             
         }
-                @include abstracts.screen(lg) {
+            @include abstracts.screen(lg) {
             width: 100%;
         }
     }
@@ -187,20 +189,22 @@
         @include abstracts.screen(lg) {
             margin-top: 0;
         }
-    }   
-    &__item-wrapper {
-
-        @include abstracts.screen(lg) {
-                display: flex;
-                flex-direction: column;
-            }
-        &:hover .top-menu__subs-wrapper {
-            display: block;
-        }
     }
 
     &__item--active .top-menu__subs-wrapper {
         display: block;
+    }
+
+    &__item-wrapper {
+        @include abstracts.screenMin(lg){
+            &:hover .top-menu__subs-wrapper {
+                display: block;
+            }
+        }
+        @include abstracts.screen(lg) {
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     &__item {
@@ -210,11 +214,23 @@
         line-height: 1.42;
         color: var(--menu-column-link);
 
-        &:hover,
+        @include abstracts.screenMin(lg){
+            &:hover > .menu-column__item {
+                font-weight: 500;
+                color: #0071DC;
+            }
+        }
+        
         &--active>.menu-column__item {
             font-weight: 500;
             color: #0071DC;
         }
+
+        &--active>.top-menu__subs-wrapper{
+            display: block;
+        }
+
+
 
         
     }

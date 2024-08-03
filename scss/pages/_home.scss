@@ -13,10 +13,10 @@
         font-size: 2.4rem;
         font-weight: 700;
         line-height: 1.41;
-        margin-bottom: 20px;
     }
 
     .home__cate {
+        margin-top: 20px;
         --grid-gutter-x: 51px;
 
         @include abstracts.screen(lg) {
@@ -28,4 +28,29 @@
             --grid-gutter-y: 20px;
         }
     }
+        .home-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+    
+        &-filter {
+            display: flex;
+            align-items: center;
+            padding: 6px 12px;
+            border-radius: 6px;
+            flex: 0 0 auto;
+            gap: 14px;
+            background: var(--home-filter-bg);
+            cursor: pointer;
+    
+            &__text {
+                color: var(--home-filter-text);
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 1.42;
+                /* 142.857% */
+            }
+        }
 }

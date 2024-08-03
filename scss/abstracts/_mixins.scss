@@ -17,3 +17,14 @@ $grid-breakpoints: (
     @error "The value #{$br} is not in breakpoint list";
   }
 }
+
+@mixin screenMin($min) {
+  $minbr: map-get($grid-breakpoints, $min);
+  @if ($minbr) {
+    @media(min-width:($min - 0.02)) {
+        @content;
+    }
+  }@else {
+    @error "The value #{$br} is not in breakpoint list";
+  }
+}

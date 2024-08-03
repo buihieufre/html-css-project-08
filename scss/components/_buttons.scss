@@ -1,0 +1,29 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    padding: 10px 20px;
+    max-height: 44px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #1A162E;
+    background: transparent;
+    border-radius: 6px;
+    background: #FFB700;
+    user-select: none;
+    cursor: pointer;
+    &--normal {
+        background: transparent;
+    }
+    &--outline{
+        background: transparent;
+        border: 1px solid #D2D1D6;;
+    }
+
+    &--rounded {
+        border-radius: 99px;
+    }
+
+    
+}

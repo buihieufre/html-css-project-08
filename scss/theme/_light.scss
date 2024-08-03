@@ -5,24 +5,24 @@ html {
   --icon-color: brightness(0) saturate(100%) invert(11%) sepia(39%) saturate(698%) hue-rotate(210deg) brightness(91%) contrast(102%);
   --body-bg: #f6f6f6;
   --header-bg-color: #eee;
-
+  --header-sign-in-btn: #1A162E;
 @include abstracts.screen(lg) {
     --header-bg-color: #fff;
     --header-shadow: rgba(237, 237, 246, 0.20);
   }
 
-        --top-act-group-bg-color: #fff;
-        --top-act-group-shadow: rgba(237, 237, 246, 0.2);
-        --top-act-seperator-bg-color: #ededf6;
-        --top-act-avt-shadow: rgba(0, 0, 0, 0.08);
-        // Dropdown
-        --drop-down-bg-color: #fff;
-        --drop-down-shadow: rgba(200, 200, 200, 0.40);
-        --drop-down-arrow-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(346deg) brightness(102%) contrast(103%);
-        // menu-column
-        --menu-column-border: #D2D1D6;
-        --menu-column-heading: #1A162E;
-// Sidebar
+    --top-act-group-bg-color: #fff;
+    --top-act-group-shadow: rgba(237, 237, 246, 0.2);
+    --top-act-seperator-bg-color: #ededf6;
+    --top-act-avt-shadow: rgba(0, 0, 0, 0.08);
+    // Dropdown
+    --drop-down-bg-color: #fff;
+    --drop-down-shadow: rgba(200, 200, 200, 0.40);
+    --drop-down-arrow-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(346deg) brightness(102%) contrast(103%);
+    // menu-column
+    --menu-column-border: #D2D1D6;
+    --menu-column-heading: #1A162E;
+  // Sidebar
         --mobile-menu-bg-color: #fff;
     --side-bar-text-color: #1A162E;
     --side-bar-shadow : rgba(200, 200, 200, 0.40);
@@ -31,8 +31,140 @@ html {
     --cate-item-thumb-wrapper: #fff;
     --cate-item-color:#EEE;
     --cate-item-heading:#000;
+    --cate-item-desc:#1A162E;
 
     @include abstracts.screen(md) {
         --cate-item-color: #fff;
     }
+    // product item
+    --product-item-background: #fff;
+    --product-item-shadow:rgba(237, 237, 246, 0.20);
+    --home-filter-bg: #fff;
+    --home-filter-text: #6C6C72;
+    --product-item-heading: #1A162E;
+    --product-item-brand: #9E9DA8;
+    --product-item-cost: #1A162E;
+    --product-item-heart-wrapper: rgba(124, 124, 124, 0.8);
+    --product-item-heart-wrapper-shadow: rgba(124, 124, 124, 0.8);
+    --product-item-heart-wrapper-bg: #fff;
+
+    //Form filter
+    --form-filter-bg:#fff;
+    --form-filter-border-color: #fff;
+    --form-filter-shadow: rgba(200, 200, 200, 0.40);
+    --form-filter-heading: #1a162e;
+    --form-filter-input-track-bg: #D2D1D6;
+    --form-filter-input-thumb-in-color: #fff;
+    --input-price-border-color:#D2D1D6;
+    --input-price-color: #1A162E;
+    --form-filter-seperator-color:#D2D1D6;
+    --form-filter-border: #D2D1D6;
+    --form-size-opt: #F8F8FB;
+    --filter-size-opt: #9E9DA8;
+    --form-filter-brand: #D2D1D6;
+    --form-filter-cancel-btn: #9E9DA8;
+    --form-filter-show-btn: #1A162E;
+    --form-filter-show-btn-bg: #FFB700;
+    
+
+    //footer
+    --footer-bg: #eee;
+    --footer-text: #1A162E;
+    --footer-text-pale: #4e4c5b;
+
+    //go to top btn
+    --go-to-top-bg: #1A162E;
+    --go-to-top-arrow: #9e9dA8;
+
+    //auth
+    --auth-bg: #fff;
+    --auth-intro-bg: #FAFAFD;
+    --auth-heading: #1A162E;
+    --auth-text:#9E9DA8;
+    --auth-link: #0071DC;
+    --auth-intro-text: #1A162E;
+    --auth-dot: #EDEDF6;
+    --auth-dot-actived: #B9BABE;
+
+    //form
+    --form-input: #1A162E;
+    --form-input-placeholder: #D2D1D6;
+    --form-default-user: #9E9DA8;
+    --form-action-btn: #1A162E;
+    --form-signup:#9E9DA8;
+    --form-sign-in-btn: brightness(0) saturate(100%) invert(6%) sepia(18%) saturate(5745%) hue-rotate(231deg) brightness(93%) contrast(92%);;
+
+    //product-detail
+    --product-preview-border: #999;
+    --product-preview-border-hover: #333;
+    --product-detail: #fff;
+    @include abstracts.screen(md){
+      --product-detail: #FAFAFD;
+      
+    }
+
+    --product-detail-info-bg: #F6F6F6;
+    @include abstracts.screen(md){
+      --product-detail-info-bg: #FFF;
+
+    }
+
+
+    --product-deatail-heading: #1A162E;
+    --product-detail-rate: #1A162E;
+    --product-detail-sub-title: #000;
+    --product-detail-sub-text: #1A162E;
+    --product-detail-discount-percent: #67B044;
+    --product-detail-discount-percent-bg: linear-gradient(0deg, rgba(255, 255, 255, 0.80) 0%, rgba(255, 255, 255, 0.80) 100%), #67B044;
+    --product-detail-item-bg: #fafafd;
+    --product-detail-info-btn: #9E9DA8;
+    --product-detail-info-btn-active: #1A162E;
+    --product-detail-info-heading: #1A162E;
+    --product-detail-item-user-heading:#1A162E;
+    --product-detail-item-para:#1A162E;
+    --product-detail-item-rate-text: #1A162E;
+
+
+
+    // bread-crumb
+    --bread-crumb-bg: #F6F6F6;
+    @include abstracts.screen(md){
+      --bread-crumb-bg: #fff;
+
+      }
+    --bread-crumb-shadow: rgba(237, 237, 246, 0.20);
+    --bread-crumb-link: #9E9DA8;
+    --bread-crumb-link-actived: #1A162E;
+    
+
+    // Cart Dropdown
+    --cart-dropdown-heading: #1A162E;
+    --cart-dropdown-all-product: #0071DC;
+    --cart-dropdown-prod-heading: #1A162E;
+    --cart-dropdown-prod-heading: #1A162E;
+    --cart-dropdown-horizontal-line-bg: #D2D1D6;
+
+
+    // checkout
+    --checkout-bg: #F6F6F6;
+    --checkout-content-bg: #fff;
+    --checkout-cart-item-seperator:#D2D1D6;
+    --checkout-cart-item-heading: #1A162E;
+    --checkout-cart-item-text: #1A162E;
+    --checkout-cart-item-total-price: #1A162E;
+    --checkout-cart-item-single-price: #9E9DA8;
+    --checkout-cart-item-status: #67B044;
+    --checkout-cart-item-back-to-shopping: #1A162E;
+    --checkout-cart-item-price: ;
+    --checkout-cart-item-gift-bg:  linear-gradient(0deg, rgba(255, 255, 255, 0.90) 0%, rgba(255, 255, 255, 0.90) 100%), #7644E1; 
+
+
+    // select(custom)
+    --select-bg: #fff;
+    --select-button-border: #D2D1D6;
+    --select-button-cta-text: #1A162E;
+    --select-drop-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;;
+    --select-option-hover-bg: #efefef;
+
+
 }

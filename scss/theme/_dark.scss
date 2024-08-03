@@ -1,36 +1,135 @@
 @use "../abstracts";
 
 html.dark {
-  --text-color: #fff;
-  --icon-color: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(150deg) brightness(103%) contrast(107%);
-  --body-bg: #292e39;
-  --header-bg-color: #171c28;
-  --top-act-group-bg-color: #292e39;
-  --top-act-group-shadow: rgba(0, 0, 0, 0.2);
-  --top-act-seperator-bg-color: #ededf6;
-  --top-act-avt-shadow: rgba(0, 0, 0, 0.08);
+    --text-color: #fff;
+    --icon-color: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(150deg) brightness(103%) contrast(107%);
+    --body-bg: #292e39;
+    --header-bg-color: #171c28;
+    --header-sign-in-btn: #eee;
+    --top-act-group-bg-color: #292e39;
+    --top-act-group-shadow: rgba(0, 0, 0, 0.2);
+    --top-act-seperator-bg-color: #ededf6;
+    --top-act-avt-shadow: rgba(0, 0, 0, 0.08);
 
-  // Dropdown
-  @include abstracts.screen(lg) {
+    // Dropdown
+    @include abstracts.screen(lg) {
     --header-shadow: rgba(0, 0, 0, 0.20);
-  }
+    }
 
-  --drop-down-bg-color: #292e43;
-  --drop-down-shadow: rgba(23, 28, 40, 0.40);
-  --drop-down-arrow-color: brightness(0) saturate(100%) invert(12%) sepia(7%) saturate(4269%) hue-rotate(191deg) brightness(89%) contrast(81%);
-  ;
-  ;
-  --menu-column-icon: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7439%) hue-rotate(339deg) brightness(98%) contrast(116%);
-  --menu-column-heading: #B9BABE;
-  --menu-column-link: #B9BABE;
-  --menu-column-border: #171C28;
+    --drop-down-bg-color: #292e43;
+    --drop-down-shadow: rgba(23, 28, 40, 0.40);
+    --drop-down-arrow-color: brightness(0) saturate(100%) invert(12%) sepia(7%) saturate(4269%) hue-rotate(191deg) brightness(89%) contrast(81%);
+    ;
+    ;
+    --menu-column-icon: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7439%) hue-rotate(339deg) brightness(98%) contrast(116%);
+    --menu-column-heading: #B9BABE;
+    --menu-column-link: #B9BABE;
+    --menu-column-border: #171C28;
 
     // Sidebar
-  --mobile-menu-bg-color:#292E39;
-  --side-bar-text-color: #B9BABE;
-  --side-bar-shadow : rgba(23, 28, 40, 0.40);
-// Home-cate-item
---cate-item-thumb-wrapper: #292E39;
---cate-item-color:#171C28;
---cate-item-heading:#fff;
+    --mobile-menu-bg-color:#292E39;
+    --side-bar-text-color: #B9BABE;
+    --side-bar-shadow : rgba(23, 28, 40, 0.40);
+    // Home-cate-item
+    --cate-item-thumb-wrapper: #292E39;
+    --cate-item-color:#171C28;
+    --cate-item-heading:#fff;
+    // product-item
+    --product-item-background: #171C28;
+    --product-item-shadow:rgba(0, 0, 0, 0.20);
+    --home-filter-bg: #171C28;
+    --home-filter-text: #fff;
+    --product-item-heading: #fff;
+    --product-item-brand: #9E9DA8;
+    --product-item-cost: #fff;
+    --product-item-heart-wrapper-shadow: rgba(124, 124, 124, 0.20);
+    --product-item-heart-wrapper-bg: #292E39;
+    //form filter
+    --form-filter-bg:#292E39;
+    --form-filter-border-color: #292E39;
+    --form-filter-shadow: rgba(0, 0, 0, 0.40);
+    --form-filter-heading: #FFFFFF;
+    --form-filter-input-track-bg: #D2D1D6;
+    --form-filter-input-thumb-in-color: #fff;
+    --input-price-border-color:#D2D1D6;
+    --input-price-color: #fff;
+    --form-filter-seperator-color:#D2D1D6;
+    --form-filter-border: #D2D1D6;
+    --form-size-opt: #171C28;
+    --filter-size-opt: #9E9DA8;
+    --form-filter-brand: #D2D1D6;
+    --form-filter-cancel-btn: #9E9DA8;
+    --form-filter-show-btn: #1A162E;
+    --form-filter-show-btn-bg: #FFB700;
+    --form-filter-size-opt-light: #292E39;
+    //footer 
+    --footer-bg: #171C28;
+    --footer-text: #fff;
+    --footer-text-pale: #9e9dA8; 
+
+    //go to top btn
+    --go-to-top-bg: #9e9dA8;
+    --go-to-top-arrow: #171C28;
+
+    //auth
+    --auth-bg: #292E39;
+    --auth-intro-bg: #171C28;
+    --auth-heading: #B9BABE;
+    --auth-text:#9E9DA8;
+    --auth-link: #0071DC;
+    --auth-intro-text: #B9BABE;
+
+    //form
+    --form-input: #fff;
+    --form-input-placeholder: #B9BABE;
+    --form-default-user: #B9BABE;
+    --form-action-btn: #1A162E;
+    --form-signup:#9E9DA8;
+    --form-sign-in-btn: brightness(0) saturate(100%) invert(85%) sepia(7%) saturate(115%) hue-rotate(191deg) brightness(89%) contrast(86%);
+
+    //product-detail
+    --product-preview-border: #999;
+    --product-preview-border-hover: #fff;
+    --product-detail: #292E39;
+    --product-detail-info-bg: #171C28;
+    --product-deatail-heading: #EEE;
+    --product-detail-rate: #EEE;
+    --product-detail-sub-title: #EEE;
+    --product-detail-sub-text: #EEE;
+    --product-detail-discount-percent: #67B044;
+    --product-detail-discount-percent-bg: linear-gradient(0deg, rgba(255, 255, 255, 0.80) 0%, rgba(255, 255, 255, 0.80) 100%), #67B044;
+    --product-detail-item-bg: #171C28;
+    --product-detail-info-btn: #9E9DA8;
+    --product-detail-info-btn-active: #fff;
+    --product-detail-info-heading: #fff;
+    --product-detail-item-user-heading:#fff;
+    --product-detail-item-para:#fff;
+    --product-detail-item-rate-text: #fff;
+    // bread-crumb
+    --bread-crumb-bg: #171C28;
+    --bread-crumb-shadow: rgba(23, 28, 40, 0.20);
+    --bread-crumb-link: #9E9DA8;
+    --bread-crumb-link-actived: #fff;
+
+
+    // checkout
+    --checkout-bg: #292E39;
+    --checkout-content-bg: #171C28;
+    --checkout-cart-item-seperator:#D2D1D6;
+    --checkout-cart-item-heading: #B9BABE;
+    --checkout-cart-item-text: #B9BABE;
+    --checkout-cart-item-total-price: #1A162E;
+    --checkout-cart-item-single-price: #9E9DA8;
+    --checkout-cart-item-status: #67B044;
+    --checkout-cart-item-back-to-shopping: #B9BABE;
+    --checkout-cart-item-price: ;
+    --checkout-cart-item-gift-bg:  #292E39; 
+
+
+    // select(custom)
+    --select-bg: #171C28;
+    --select-button-border: #292E39;
+    --select-button-cta-text: #B9BABE;
+    --select-drop-shadow: rgba(229, 211, 211, 0.2) 0px 2px 8px 0px;;
+    --select-option-hover-bg: rgb(62, 59, 59);
 }

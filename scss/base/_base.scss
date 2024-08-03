@@ -8,7 +8,10 @@
   --text-color: #1a162e;
   --icon-color: brightness(0) saturate(100%) invert(11%) sepia(39%)
     saturate(698%) hue-rotate(210deg) brightness(91%) contrast(102%);
+
+  --icon-grey: brightness(0) saturate(100%) invert(69%) sepia(10%) saturate(232%) hue-rotate(206deg) brightness(90%) contrast(88%);;
 }
+img,
 a,
 input,
 textarea,
@@ -24,13 +27,14 @@ select {
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
   font-size: 1.6rem;
   font-family: Gordita, sans-serif;
   color: var(--text-color);
-    background: var(--body-bg);
+  background: var(--body-bg);
 }
 
 a {
@@ -41,4 +45,35 @@ a {
 
 .icon {
   filter: var(--icon-color);
+}
+
+.icon--grey {
+  filter: var(--icon-grey);
+}
+
+.go-to-top{
+  position: fixed;
+  bottom: 12px;
+  right: 24px;
+  width: 50px;
+  height: 50px;
+  border-radius: 99px;
+  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition-property: opacity, visibility;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+  background: var(--go-to-top-bg);
+  & i{
+    color: var(--go-to-top-arrow);
+  }
+}
+
+.visable {
+  visibility: visible;
+  opacity: 1;
 }
