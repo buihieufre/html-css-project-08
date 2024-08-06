@@ -166,5 +166,25 @@ html {
     --select-drop-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;;
     --select-option-hover-bg: #efefef;
 
+    
+    // Shipping
+    --checkout-shipping-text:#1A162E;
+    --checout-shipping-seperator: #9E9DA8;
+    --checkout-shipping-checkbox-border: #1A162E;
+    --checkout-shipping-checkbox-bg: #67B044;
+    --checkout-shipping-check-icon: #FFFFFF;
 
+    // Payment
+    --checkput-payment-text-active: #1A162E;
+    --checkput-payment-text: #9E9DA8;
+    --checkout-payment-bg: #f6f6f6;
+    --checkout-payment-item-info: #F6F6F6;
+    --checkout-payment-section-bg: #FFF;
+    --checkbox-payment-input-border: #EDEDF6;
+    --checkbox-payment-input-placeholder: #EDEDF6;
+    --checkbox-payment-detail-price-text: #B9BABE;
+
+    //favourite
+
+    --favourite-text: #1A162E;
 }

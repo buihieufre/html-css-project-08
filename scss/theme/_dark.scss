@@ -132,4 +132,21 @@ html.dark {
     --select-button-cta-text: #B9BABE;
     --select-drop-shadow: rgba(229, 211, 211, 0.2) 0px 2px 8px 0px;;
     --select-option-hover-bg: rgb(62, 59, 59);
+
+    // Shipping
+    --checkout-shipping-text:#B9BABE;
+    --checout-shipping-seperator: #9E9DA8;
+    --checkout-shipping-checkbox-border: #B9BABE;
+    --checkout-shipping-checkbox-bg: #67B044;
+    --checkout-shipping-check-icon: #FFFFFF;
+
+    //payment
+    --checkput-payment-text-active: #1A162E;
+    --checkput-payment-text: #9E9DA8;
+    --checkout-payment-bg: #292E39;
+    --checkout-payment-item-info: #292E39;
+    --checkout-payment-section-bg: #171C28;
+    --checkbox-payment-input-border: #EDEDF6;
+    --checkbox-payment-input-placeholder: #EDEDF6;
+    --checkbox-payment-detail-price-text: #B9BABE;
 }

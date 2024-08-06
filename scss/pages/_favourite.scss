@@ -1,0 +1,52 @@
+@use "../abstracts";
+.favourite {
+
+    &__heading {
+        color: var(--favourite-text);
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 1.45; /* 145.455% */
+    }
+
+    &__count {
+        color: var(--favourite-text);
+        font-size: 1.5rem;
+        line-height: 1.46; /* 146.667% */
+    }
+    
+    &__list{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px;
+    }
+
+    &__item {
+        gap: 20px;
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+
+        @include abstracts.screen(lg){
+            flex-direction: column;
+        }
+    }
+
+    &-toCheckout {
+        min-width: 194px;
+        @include abstracts.screen(sm){
+            width: 194px;
+        }
+    }
+
+    &__select-btn {
+        min-width: 150px;
+    }
+
+    &__checkbox-label {
+        margin-right: 0;
+    }
+}

@@ -1,0 +1,190 @@
+@use "../abstracts";
+
+.checkout-payment{
+    &-section {
+        padding: 0;
+        background: var(--checkout-payment-bg);
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    &__heading {
+        font-size: 22px;
+        font-weight: 500;
+        @include abstracts.screen(sm){
+            font-size: 1.6rem;
+        }
+    }
+
+    &__recheck-order, &__shipping-method{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px;
+        border-radius: 20px;
+        background: var(--checkout-payment-section-bg);
+        @include abstracts.screen(lg){
+            gap: 20px;
+            padding: 16px;
+        }
+    }
+
+    &__shipping-method{
+        margin-top: 30px;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__row-inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex: 1 0;
+
+        @include abstracts.screen(md){
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+        }
+    }
+
+    &__item-info{
+        padding: 20px;
+        border-radius: 20px;
+        background: var(--checkout-payment-item-info);
+    }
+
+    &__item-info--stick {
+        justify-content: flex-start;
+    }
+
+    &__subheading {
+        @include abstracts.screen(lg){
+            font-size: 1.6rem;
+        }
+    }
+
+    &__desc {
+        @include abstracts.screen(lg){
+            font-size: 1.4rem;
+        }
+    }
+
+    &__check{
+        align-self: center;
+        margin: 0;
+    }
+
+    &__method-thumb{
+        display: inline-block;
+        width: 70px;
+        height: 54px;
+        border-radius: 10px;
+        object-fit: cover;
+        margin-right: 20px;
+        @include abstracts.screen(md){
+            align-self: flex-start;
+        }
+    }
+
+    &__shipping-cost{
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        gap: 14px;
+        color: var(--checkout-payment-text-active);
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.44; /* 144.444% */
+        @include abstracts.screen(md){
+            margin-left: 0;
+        }
+    }
+    &__shipping-cost .checkout-payment__check{
+        border-color: #9E9DA8;
+    }
+
+    &__shipping-cost--selected{
+        color: var( --checkput-payment-text);
+    }
+
+    &-side-bar{
+        padding: 30px;
+        border-radius: 20px;
+        background: var(--checkout-payment-section-bg);
+        @include abstracts.screen(lg){
+            padding: 16px;
+        }
+    }
+
+    &-form{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 30px;
+        @include abstracts.screen(md){
+            gap: 20px;
+        }
+    }
+
+    &-form__group{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 20px;
+    }
+
+    &-form__group-row {
+        align-items: center;
+        border: 1px solid var(--checkbox-payment-input-border);
+        flex-direction: row;
+        border-radius: 10px;
+    }
+
+    &__input {
+        min-height: 50px;
+        width: 100%;
+        border-radius: 10px;
+        padding: 12px;
+        border: 1px solid var(--checkbox-payment-input-border);
+        color: var(--checkput-payment-text);
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.44; /* 144.444% */
+
+        @include abstracts.screen(md){
+            font-size: 1.4rem;
+        }   
+    }
+
+    &__seperator {
+        width: 1px;
+        height: 26px;
+        background: var(--checkbox-payment-input-border);
+    }
+
+    &__input--no-border {
+        border: none;
+    }
+
+    &__input::placeholder{
+        color: var(--checkbox-payment-input-placeholder);
+    }
+
+    &__price-desc{
+        display: flex;
+    }
+
+    &-side-bar__price{
+        padding: 0;
+        background: var(--checkout-payment-section-bg);
+    }
+
+    &-detail-price__heading, &-detail-price__value{
+        color: var(--checkbox-payment-detail-price-text);
+    }
+}

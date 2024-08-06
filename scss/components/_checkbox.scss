@@ -1,0 +1,62 @@
+.checkbox {
+    &-label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        align-self: flex-start;
+        user-select: none;
+        border-radius: 5px;
+        margin: 2.75px;
+        margin-right: 16px;
+        width: 24px;
+        height: 24px;
+        border: 2px solid var(--checkout-shipping-checkbox-border);
+        cursor: pointer;
+        flex-shrink: 0;
+    }
+
+
+    &-label::before {
+        display: none;
+        rotate: -45deg;
+        position: absolute;
+        content: "";
+        width: 2px;
+        height: 7px;
+        background: var(--checkout-shipping-check-icon);
+        left: 8px;
+        top: 10px;
+        border-radius: 1px;
+    }
+
+    &-label::after{
+        display: none;
+        rotate: 45deg;
+        position: absolute;
+        content: "";
+        width: 2px;
+        height: 12px;
+        background: var(--checkout-shipping-check-icon);
+        left: 13.5px;
+        border-radius: 1px;
+    }
+
+    &-label:has(&-input--checked){
+        flex-shrink: 0;
+        border: none;
+        background: var(--checkout-shipping-checkbox-bg);
+        &::before {
+            display: block;
+        }
+
+        &::after {
+            display: block;
+        }
+    }
+
+    &-input {
+        display: none;
+        flex-shrink: 0;
+    }
+}

@@ -55,7 +55,7 @@
     }
     
     &-item__img-wrapper {
-        @include abstracts.screen(lg){
+        @include abstracts.screen(xl){
             align-self: self-start;
         }
     }
@@ -171,7 +171,9 @@
         display: flex;
         align-items: center;
         column-gap: 10px;
-        
+        padding: 10px 20px;
+        border: 1px solid var(--select-button-border);
+        border-radius: 10px;
     }
 
     &-item__minus, &-item__add {

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Grocerymart</title>
+        <!-- Favicon link -->
+        <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+        <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+        <!-- fontawesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer" />
+        <!-- Fonts -->
+        <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+        <!-- Scripts -->
+        <script src="./assets/js/scripts.js"></script>
+        <!-- CSS -->
+        <link rel="stylesheet" href="./assets/css/main.css" />
+    </head>
+
+    <body>
+        <!-- Header -->
+        <header id="header" class="header"></header>
+        <script>
+            load("#header", "./templates/header-logined.html");
+        </script>
+        <!--Slide show  -->
+        <main class="product checkout">
+            <div class="container">
+                <div class="product-container">
+                    <ul class="bread-crumb checkout__bread-crumb">
+                        <li class="bread-crumb-item">
+                            <a href="#!" class="bread-crumb-item__link">Home</a>
+                            <img src="./assets/icons/arrow-right-tailess.svg" alt="">
+                        </li>
+                        <li class="bread-crumb-item">
+                            <a href="#!" class="bread-crumb-item__link">Checkout</a>
+                            <img src="./assets/icons/arrow-right-tailess.svg" alt="">
+                        </li>
+                        <li class="bread-crumb-item">
+                            <a href="#!" class="bread-crumb-item__link">Shipping</a>
+                            <img src="./assets/icons/arrow-right-tailess.svg" alt="">
+                        </li>
+                        <li class="bread-crumb-item">
+                            <a href="#!" class="bread-crumb-item__link bread-crumb-item__link--actived">Payment Method</a>
+                        </li>
+                    </ul>
+
+                    <section class="checkout-cart">
+                        <div class="checkout-cart-info checkout-payment-section">
+                            <div class="checkout-payment__recheck-order">
+                                <div class="checkout-payment__row">
+                                    <h2 class="checkout-shipping__heading checkout-payment__heading">
+                                        1. Shipping, arrives between Mon, May 16—Tue, May 24
+                                    </h2>
+                                    <button class="checkout-shipping__edit-btn">
+                                        <img src="./assets/icons/edit.svg" class="icon" alt="">
+                                        <span>Edit</span>
+                                    </button>
+                                </div>
+                                <div class="checkout-payment__row checkout-payment__item-info">
+                                    <div class="checkout-payment-order-info">
+                                        <h4 class="checkout-shipping__subheading checkout-payment__subheading  ">Imran Khan</h4>
+                                        <p class="checkout-shipping__desc checkout-payment__desc">Museum of Rajas, Sylhet Sadar, Sylhet 3100.</p>
+                                    </div>
+                                    <label class="checkbox-label checkout-shipping__check-address checkout-payment__check"><input type="checkbox" name="" class="checkbox-input checkbox-input--checked checkout-shipping__check-address-input checkout-shipping__check-address-input--checked" id=""></label>
+                                </div>
+                                <div class="checkout-payment__row checkout-payment__item-info">
+                                    <div class="checkout-payment-order-info">
+                                        <h4 class="checkout-shipping__subheading checkout-payment__subheading ">Items details</h4>
+                                        <p class="checkout-shipping__desc checkout-payment__desc">2 items</p>
+                                    </div>
+                                    <a href="#!" class="checkout-shipping__desc checkout-payment__desc">View details</a>
+                                </div>
+                            </div>
+
+                            <div class="checkout-payment__shipping-method">
+                                <h2 class="checkout-shipping__heading checkout-payment__heading">
+                                    1. Shipping, arrives between Mon, May 16—Tue, May 24
+                                </h2>
+                                <div class="checkout-shipping__seperator"></div>
+                                <h4 class="checkout-shipping__subheading checkout-payment__subheading ">Availeble Shipping method</h4>
+                                <div class="checkout-payment__row checkout-payment__item-info checkout-payment__item-info--stick ">
+                                    <img src="./assets/images/shippingMethod/ghn.png" alt="" class="checkout-payment__method-thumb">
+                                    <div class="checkout-payment__row-inner">
+                                        <div class="checkout-payment-order-info">
+                                            <h4 class="checkout-shipping__subheading checkout-payment__subheading ">Fast Delivery</h4>
+                                            <p class="checkout-shipping__desc checkout-payment__desc">Delivery: 2-3 days work</p>
+                                        </div>
+                                        <div class="checkout-payment__shipping-cost">
+                                            Free
+                                            <label class="checkout-shipping__check-address checkout-payment__check"><input type="checkbox" name="" class="checkout-shipping__check-address-input checkout-shipping__check-address-input--checked" id=""></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="checkout-payment__row checkout-payment__item-info checkout-payment__item-info--stick ">
+                                    <img src="./assets/images/shippingMethod/ghtk.jpg" alt="" class="checkout-payment__method-thumb">
+                                    <div class="checkout-payment__row-inner">
+                                        <div class="checkout-payment-order-info">
+                                            <h4 class="checkout-shipping__subheading checkout-payment__subheading ">Items details</h4>
+                                            <p class="checkout-shipping__desc checkout-payment__desc">2 items</p>
+                                        </div>
+                                        <div class="checkout-payment__shipping-cost  checkout-payment__shipping-cost--selected">
+                                            $12.00
+                                            <label class="checkout-shipping__check-address checkout-payment__check"><input type="checkbox" name="" class="checkout-shipping__check-address-input" id=""></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="checkout-cart-side-bar checkout-payment-side-bar">
+                            <form action="" class="checkout-payment-form">
+                                <div class="checkout-payment-form__group">
+                                    <h2 class="checkout-shipping__heading checkout-payment__heading">
+                                        Payment Details
+                                    </h2>
+                                    <p class="checkout-shipping__desc checkout-payment__desc">Complete your purchase item by providing your payment details order.</p>
+                                </div>
+                                <div class="checkout-payment-form__group">
+                                    <label for="emailAddress"><h4 class="checkout-shipping__subheading checkout-payment__subheading ">Email Address</h4></label>
+                                    <input class="checkout-payment__input" placeholder="email@gmail.com" type="email" name="" id="emailAddress">
+                                </div>
+                                <div class="checkout-payment-form__group">
+                                    <label for="cardHolder"><h4 class="checkout-shipping__subheading checkout-payment__subheading ">Card Holder</h4></label>
+                                    <input class="checkout-payment__input" placeholder="email@gmail.com" type="email" name="" id="cardHolder">
+                                </div>
+                                <div class="checkout-payment-form__group">
+                                    <label for="cardDetail"><h4 class="checkout-shipping__subheading checkout-payment__subheading ">Card Details</h4></label>
+                                    <input class="checkout-payment__input" placeholder="email@gmail.com" type="email" name="" id="cardDetail">
+                                </div>
+                                <div class="checkout-payment-form__group checkout-payment-form__group-row">
+                                    <input class="checkout-payment__input checkout-payment__input--no-border " placeholder="MM/YY" type="text" name="" id="">
+                                    <div class="checkout-payment__seperator"></div>
+                                    <input class="checkout-payment__input checkout-payment__input--no-border " placeholder="CVC" type="text" name="" id="">
+                                </div>
+                            </form>
+                            <div class="checkout-cart__price-desc checkout-payment__price-desc">
+                                <div class="checkout-cart-detail-price checkout-cart-side-bar__price checkout-payment-side-bar__price">
+                                    <div class="checkout-cart-detail-price-row">
+                                        <span class="checkout-cart-detail-price__heading checkout-payment-detail-price__heading">Subtotal <span class="checkout-cart-detail-price__sub-heading">(items)</span></span>
+                                        <span class="checkout-cart-detail-price__value checkout-payment-detail-price__value ">$191.65</span>
+                                    </div>
+                                    <div class="checkout-cart-detail-price-row">
+                                        <span class="checkout-cart-detail-price__heading checkout-payment-detail-price__heading">Price <span class="checkout-cart-detail-price__sub-heading">(Total)</span></span>
+                                        <span class="checkout-cart-detail-price__value checkout-payment-detail-price__value ">$191.65</span>
+                                    </div>
+                                    <div class="checkout-cart-detail-price-row">
+                                        <span class="checkout-cart-detail-price__heading checkout-payment-detail-price__heading">Shipping:</span>
+                                        <span class="checkout-cart-detail-price__value checkout-payment-detail-price__value ">$10:00</span>
+                                    </div>
+                                    <div class="checkout-cart-detail-price-row checkout-cart-total-price">
+                                        <span class="checkout-cart-detail-price__heading checkout-payment-detail-price__heading">Estimated Total:</span>
+                                        <span class="checkout-cart-detail-price__value checkout-payment-detail-price__value ">$201.65</span>
+                                    </div>
+    
+                                    <a href="./paymentMethod.html" class="btn btn--rounded checkout-cart-side-bar__continue">Pay $465.98</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                </div>
+            </div>
+        </main>
+        <!-- Footer -->
+        <footer id="footer"></footer>
+        <script>
+            load("#footer", "./templates/footer.html");
+        </script>
+        <script src="./assets/js/scripts.js" type="module"></script>
+    </body>
+</html>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Grocerymart</title>
+        <title>Grocerymart | Shipping</title>
         <!-- Favicon link -->
         <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
@@ -43,13 +43,68 @@
                             <img src="./assets/icons/arrow-right-tailess.svg" alt="">
                         </li>
                         <li class="bread-crumb-item">
-                            <a href="#!" class="bread-crumb-item__link bread-crumb-item__link--actived">Checkout</a>
+                            <a href="#!" class="bread-crumb-item__link">Checkout</a>
+                            <img src="./assets/icons/arrow-right-tailess.svg" alt="">
+                        </li>
+                        <li class="bread-crumb-item">
+                            <a href="#!" class="bread-crumb-item__link bread-crumb-item__link--actived">Shipping</a>
                         </li>
                     </ul>
 
                     <section class="checkout-cart">
-                        <div class="checkout-cart-info">
+                        <div class="checkout-cart-info checkout-shipping">
+                            <h2 class="checkout-shipping__heading">
+                                1. Shipping, arrives between Mon, May 16—Tue, May 24
+                            </h2>
+                            <div class="checkout-shipping__seperator"></div>
+                            <div class="checkout-shipping-modify-address">
+                                <div class="checkout-shipping__row">
+                                    <div class="checkout-shipping-modify-address__title checkout-shipping-modify-address__title--vertical">
+                                        <h4 class="checkout-shipping__subheading">Shipping address</h4>
+                                        <p class="checkout-shipping__desc">Where should we deliver your order?</p>
+                                    </div>
+                                   <button class="btn btn--rounded checkout-shipping__add-address">
+                                        <img src="./assets/icons/add-btn.svg" class="" alt="">
+                                        <span>Add a new address</span>
+                                   </button>
+                                </div>
+                                <div class="checkout-shipping__row">
+                                    <div class="checkout-shipping-modify-address__title ">
+                                        <label class="checkout-shipping__check-address "><input type="checkbox" class="checkout-shipping__check-address-input checkout-shipping__check-address-input--checked" name="" id="" ></label>
+                                        <div class="checkout-shipping-modify-address__title-inner">
+                                            <h4 class="checkout-shipping__subheading">Imran Khan</h4>
+                                            <p class="checkout-shipping__desc">Al Hamra City (10th Floor), Hazrat Shahjalal Road, Sylhet, Sylhet, Bangladesh.</p>
+                                            <ul class="checkout-shipping__options" >
+                                                <li type="disc" class="checkout-shipping__option">Shipping</li>
+                                                <li type="disc" class="checkout-shipping__option">Delivery from store</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <button class="checkout-shipping__edit-btn">
+                                        <img src="./assets/icons/edit.svg" class="icon" alt="">
+                                        <span>Edit</span>
+                                    </button>
+                                </div>
+                                <div class="checkout-shipping__row">
+                                    <div class="checkout-shipping-modify-address__title">
+                                        <label class="checkout-shipping__check-address "><input type="checkbox" class="checkout-shipping__check-address-input" name="" id="" ></label>
+                                        <div class="checkout-shipping-modify-address__title-inner">
+                                            <h4 class="checkout-shipping__subheading">Imran Khan</h4>
+                                            <p class="checkout-shipping__desc">Museum of Rajas, Sylhet Sadar, Sylhet 3100.</p>
+                                            <ul class="checkout-shipping__options" >
+                                                <li type="disc" class="checkout-shipping__option">Shipping</li>
+                                                <li type="disc" class="checkout-shipping__option">Delivery from store</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <button class="checkout-shipping__edit-btn">
+                                        <img src="./assets/icons/edit.svg" class="icon" alt="">
+                                        <span>Edit</span>
+                                    </button>
+                                </div>
+                            </div>
                             <div class="checkout-cart-product-list">
+                                <h4 class="checkout-shipping__subheading">Items details</h4>
                                 <div class="checkout-cart-item">
                                     <div class="checkout-cart-item__img-wrapper">
                                         <a href="#!"><img src="./assets/images/product/product-item-1.png" alt="" class="checkout-cart-item__img"></a>
@@ -64,7 +119,7 @@
                                             </div>
                                             <div class="checkout-cart-item__modify">
                                                 <div class="select" id="select">
-                                                    <div class="select__button" >
+                                                    <div class="select__button checkout-shipping__select-btn" >
                                                         <span class="select__option--default" id="option-default">Select type</span>
                                                         <img src="./assets/icons/arrow-down-light.svg" alt="" class="select__button-chevron-down icon">
                                                     </div>
@@ -196,26 +251,12 @@
                                 <div class="checkout-cart-item__seperator checkout-cart-item__seperator--last"></div>
 
                             </div>
-                            <div class="checkout-cart__price-desc">
+                            <div class="checkout__bottom">
                                 <div class="back-to-shopping">
                                     <img src="./assets/icons/arrow-down-light.svg" class="back-to-shopping__icon icon" alt="">
                                     <a href="./index-logined.html" class="back-to-shopping__text">Continue Shopping</a>
                                 </div>
-                                <div class="checkout-cart-detail-price">
-                                    <div class="checkout-cart-detail-price-row">
-                                        <span class="checkout-cart-detail-price__heading">Subtotal:</span>
-                                        <span class="checkout-cart-detail-price__value">$191.65</span>
-                                    </div>
-                                    <div class="checkout-cart-detail-price-row">
-                                        <span class="checkout-cart-detail-price__heading">Shipping:</span>
-                                        <span class="checkout-cart-detail-price__value">$10:00</span>
-                                    </div>
-                                    
-                                    <div class="checkout-cart-detail-price-row checkout-cart-total-price">
-                                        <span class="checkout-cart-detail-price__heading checkout-cart-detail-price__heading--large">Total:</span>
-                                        <span class="checkout-cart-detail-price__value checkout-cart-detail-price__value--large">$201.65</span>
-                                    </div>
-                                </div>
+                                <a href="./paymentMethod.html" class="btn btn--rounded checkout-shipping__next-step">Continue</a>
                             </div>
                         </div>
                         <div class="checkout-cart-side-bar">
@@ -234,23 +275,14 @@
                                 </div>
                                 
                                 <div class="checkout-cart-detail-price-row checkout-cart-total-price">
-                                    <span class="checkout-cart-detail-price__heading checkout-cart-detail-price__heading--large">Total:</span>
-                                    <span class="checkout-cart-detail-price__value checkout-cart-detail-price__value--large">$201.65</span>
+                                    <span class="checkout-cart-detail-price__heading">Estimated Total:</span>
+                                    <span class="checkout-cart-detail-price__value">$201.65</span>
                                 </div>
 
-                                <a href="./shipping.html" class="btn btn--rounded checkout-cart-side-bar__continue">Continue to checkout</a>
+                                <a href="./paymentMethod.html" class="btn btn--rounded checkout-cart-side-bar__continue checkout-shipping__continue-btn">Continue to checkout</a>
                             </div>
-                             <div class="checkout-cart-side-bar__gift">
-                                <a href="#!"><div class="checkout-cart-side-bar__gift-img-wrapper "><img src="./assets/icons/gift.svg" alt="" class="checkout-cart-side-bar__gift-img"></div></a>
-                                <div class="checkout-cart-side-bar__gift-content">
-                                    <h4 class="checkout-cart-side-bar__gift-heading">Send this order as a gift.</h4>
-                                    <p class="checkout-cart-side-bar__gift-text">Available items will be shipped to your gift recipient.</p>
-                                </div>
-
-                             </div>
                         </div>
                     </section>
-                    
                 </div>
             </div>
         </main>
@@ -259,6 +291,14 @@
         <script>
             load("#footer", "./templates/footer.html");
         </script>
-        <script src="./assets/js/scripts.js" type="module"></script>
+        <script>
+            let cartBtn = document.querySelector(".cart-btn");
+            let cartDropDown = document.querySelector('.cart-dropdown')
+            console.log(cartBtn, cartDropDown)
+            cartBtn.onhover = (e) =>{
+                 cartDropDown.classList.add("cart-dropdown--active")
+            }
+        </script>
+        <script type="module" src="./assets/js/scripts.js"></script>
     </body>
 </html>

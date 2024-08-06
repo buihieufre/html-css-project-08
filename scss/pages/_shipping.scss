@@ -1,0 +1,180 @@
+@use "../abstracts";
+.checkout-shipping{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    &__heading {
+        color: var(--checkout-shipping-text);
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 34px; /* 141.667% */
+    }
+
+    &__seperator{
+        width: 100%;
+        height: 1px;
+        background: var(--checout-shipping-seperator);
+    }
+
+    &-modify-address{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    &__row {
+        display: flex;
+        @include abstracts.screen(md){
+            flex-direction: column;
+        }
+        
+    }
+
+    &-modify-address__title{
+        display: flex;
+    }
+
+    &-modify-address__title--vertical {
+        flex-direction: column;
+    }
+
+    &__subheading {
+        color: var(--checkout-shipping-text);
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.44; /* 144.444% */
+    }
+
+    &__desc {
+        margin-left: auto;
+        margin-top: 4px;
+        color: var(--checkout-shipping-text);
+        font-size: 1.5rem;
+        line-height: 1.46; /* 146.667% */
+    }
+
+    &__add-address{
+        margin-left: auto;
+        display: flex;
+        gap: 10px;
+
+        @include abstracts.screen(md){
+            margin-left: 0;
+            margin-top: 16px;
+        }
+    }
+
+
+    &__check-address{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        align-self: flex-start;
+        user-select: none;
+        border-radius: 5px;
+        margin: 2.75px;
+        margin-right: 16px;
+        width: 24px;
+        height: 24px;
+        border: 2px solid var(--checkout-shipping-checkbox-border);
+        cursor: pointer;
+    }
+
+    &__check-address:has(&__check-address-input--checked) {
+        flex-shrink: 0;
+        border: none;
+        background: var(--checkout-shipping-checkbox-bg);
+        &::before {
+            display: block;
+        }
+
+        &::after {
+            display: block;
+        }
+    }
+
+    &__check-address::before {
+        display: none;
+        rotate: -45deg;
+        position: absolute;
+        content: "";
+        width: 2px;
+        height: 7px;
+        background: var(--checkout-shipping-check-icon);
+        left: 8px;
+        top: 10px;
+        border-radius: 1px;
+    }
+
+    &__check-address::after{
+        display: none;
+        rotate: 45deg;
+        position: absolute;
+        content: "";
+        width: 2px;
+        height: 12px;
+        background: var(--checkout-shipping-check-icon);
+        left: 13.5px;
+        border-radius: 1px;
+    }
+
+    
+
+    &__check-address-input {
+        display: none;
+    }
+
+    &__options{
+        margin-top: 20px;
+        display: flex;
+        column-gap: 40px;
+    }
+
+    &__option {
+        margin-left: 20px;
+    }
+
+    &__edit-btn{
+        display: flex;
+        gap: 10px;
+        align-self: flex-end;
+        margin-left: auto;
+        color: var(--checkout-shipping-text);
+        font-size: 1.8rem;
+        line-height: 1.44; /* 144.444% */
+        cursor: pointer;
+        @include abstracts.screen(md){
+            margin-left: 0;
+            margin-top: 16px;
+            align-self: flex-start;
+        }
+    }   
+
+    &__next-step {
+        padding: 18px 40px;
+    }
+
+    &__select-btn{
+        @include abstracts.screen(sm){
+            min-width: 129px;
+        }
+    }
+
+    &__continue-btn{
+        display: none;
+        @include abstracts.screen(lg){
+            display: block;
+        }
+    }
+
+}
+
+.checkout__bottom {
+    display: flex;
+    justify-content: space-between;
+
+    @include abstracts.screen(lg){
+        display: none;
+    }
+}
