@@ -1,19 +1,31 @@
 @use "../abstracts";
 
 .product-container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
     margin-top: 30px;
+
+    @include abstracts.screen(lg){
+        gap: 20px;
+    }
 }
 
 .product{
     display: flex;
     flex-direction: column;
-    background: var(--product-detail);
+    background: var(--product-bg);
+
+    &__bread-crumb{
+        background: var(--product-detail-info-bg) !important;
+    }
+
     &-overview{
         margin-top: 30px;
         display: grid;
         grid-template-columns: 1fr 1.37fr;
         column-gap: 60px;
-        background: var(--product-detail-info-bg);
+        // background: var(--product-detail-info-bg);
         @include abstracts.screen(xxl){
             grid-template-columns: 1fr 1.17fr;
             column-gap: 40px;
@@ -35,7 +47,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        background: var(--product-detail-info-bg);
         @include abstracts.screen(lg){
             flex-direction: row-reverse;
             padding: 30px;
@@ -214,10 +225,7 @@
         flex: 1;
         display: flex;
         align-items: stretch;
-        // flex-grow: 0;
         white-space: nowrap;
-        // padding-left: 55px;
-        // padding-right: 55px;
         
     }
 
@@ -239,9 +247,13 @@
     position: relative;
     display: flex;
     column-gap: 60px;
+
     @include abstracts.screen(md){
+        flex-wrap: wrap;
+        row-gap: 20px;
         margin-top: 0;
     }
+
     &__btn{
         color: var(--product-detail-info-btn);
         font-size: 2.2rem;
@@ -256,10 +268,8 @@
 
     &__block{
         height: 100%;
-    }
-
-    &__block--active .product-detail-info-cate__btn {
-        color: var(--product-detail-info-btn-active);
+        cursor: pointer;
+        user-select: none;
     }
 
     &__inner {
@@ -290,10 +300,20 @@
     }
 
     &-content{
+        display: none;
         padding-bottom: 30px;
     }
+
+    
 }
 
+.product-tab--actived .product-detail-info-cate__btn {
+    color: var(--product-detail-info-btn-active);
+}
+
+.product-tab-content--actived {
+    display: block;
+}
 .product-detail-info-cate-list{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -306,6 +326,11 @@
         grid-template-columns: 1fr;
     }
 }
+
+.product-tab__text-content {
+    margin-top: -30px;
+}
+
 .product-detail-item{
     display: flex;
     flex-direction: column;

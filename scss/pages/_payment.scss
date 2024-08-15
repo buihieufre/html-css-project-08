@@ -155,11 +155,14 @@
         font-size: 1.8rem;
         font-weight: 500;
         line-height: 1.44; /* 144.444% */
-
         @include abstracts.screen(md){
             font-size: 1.4rem;
         }   
     }
+
+
+
+    
 
     &__seperator {
         width: 1px;

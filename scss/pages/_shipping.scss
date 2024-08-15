@@ -79,6 +79,9 @@
         height: 24px;
         border: 2px solid var(--checkout-shipping-checkbox-border);
         cursor: pointer;
+        &--grey {
+            border: 2px solid var(--checkout-shipping-checkbox-border-grey);
+        }
     }
 
     &__check-address:has(&__check-address-input--checked) {
@@ -164,7 +167,7 @@
     &__continue-btn{
         display: none;
         @include abstracts.screen(lg){
-            display: block;
+            display: flex;
         }
     }
 

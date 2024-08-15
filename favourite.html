@@ -36,6 +36,10 @@
         <main class="product favourite">
             <div class="container">
                 <div class="product-container">
+                    <div class="search-bar">
+                        <input type="text" class="search-bar__input" placeholder="Search for item">
+                        <img src="./assets/icons/search.svg" class="search-bar__icon icon" alt="">
+                    </div>
                     <ul class="bread-crumb checkout__bread-crumb">
                         <li class="bread-crumb-item">
                             <a href="#!" class="bread-crumb-item__link">Home</a>
@@ -115,7 +119,7 @@
                             </div>                                    
                             <div class="checkout-cart-item-content">
                                 <div class="checkout-cart-item__left">
-                                    <a href="#!"><h3 class="checkout-cart-item__heading">Coffee Beans - Espresso Arabica and Robusta Beans</h3></a>
+                                    <a href="#!" onclick="" ><h3 class="checkout-cart-item__heading">Coffee Beans - Espresso Arabica and Robusta Beans</h3></a>
                                     <div class="checkout-cart-item__props">
                                         <span class="checkout-cart-item__single-price">$47.00</span>
                                         <span class="checkout-cart-item__prop-seperator"></span>
@@ -165,7 +169,7 @@
                             </div>                                    
                             <div class="checkout-cart-item-content">
                                 <div class="checkout-cart-item__left">
-                                    <a href="#!"><h3 class="checkout-cart-item__heading">Coffee Beans - Espresso Arabica and Robusta Beans</h3></a>
+                                    <a href="#!" class="toTop"><h3 class="checkout-cart-item__heading">Coffee Beans - Espresso Arabica and Robusta Beans</h3></a>
                                     <div class="checkout-cart-item__props">
                                         <span class="checkout-cart-item__single-price">$47.00</span>
                                         <span class="checkout-cart-item__prop-seperator"></span>
@@ -279,7 +283,7 @@
             load("#footer", "./templates/footer.html");
         </script>
         <script>
-            const filterSizeList = $$("input[name='filter-size']");
+            /*const filterSizeList = $$("input[name='filter-size']");
             const filterSizeBtn = $$(".filter-size-opt");
             filterSizeBtn.forEach(function (e) {
                 e.addEventListener("click", function () {
@@ -334,6 +338,10 @@
                     item.classList.toggle("product-item__heart-wrapper--actived");
                 });
             });
+
+            */
         </script>
+
+        <script type="module" src="./assets/js/scripts.js"></script>
     </body>
 </html>

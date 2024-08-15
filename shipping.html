@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -37,6 +37,10 @@
         <main class="product checkout">
             <div class="container">
                 <div class="product-container">
+                    <div class="search-bar">
+                        <input type="text" class="search-bar__input" placeholder="Search for item">
+                        <img src="./assets/icons/search.svg" class="search-bar__icon icon" alt="">
+                    </div>
                     <ul class="bread-crumb checkout__bread-crumb">
                         <li class="bread-crumb-item">
                             <a href="#!" class="bread-crumb-item__link">Home</a>
@@ -63,7 +67,7 @@
                                         <h4 class="checkout-shipping__subheading">Shipping address</h4>
                                         <p class="checkout-shipping__desc">Where should we deliver your order?</p>
                                     </div>
-                                   <button class="btn btn--rounded checkout-shipping__add-address">
+                                   <button class="btn btn--rounded checkout-shipping__add-address js-toggle" toggle-target="#form-address">
                                         <img src="./assets/icons/add-btn.svg" class="" alt="">
                                         <span>Add a new address</span>
                                    </button>
@@ -144,7 +148,7 @@
                                                     <span class="checkout-cart-item__action-text">Save</span>
                                                 </div>
                                                 <div class="checkout-cart-item__action">
-                                                    <img src="./assets/icons/delete.svg" class="icon icon--grey" alt="">
+                                                    <img src="./assets/icons/delete.svg" class="icon icon--grey js-toggle" toggle-target="#dialog-delete" alt="">
                                                     <span class="checkout-cart-item__action-text">Delete</span>
                                                 </div>
                                             </div>
@@ -192,7 +196,7 @@
                                                     <span class="checkout-cart-item__action-text">Save</span>
                                                 </div>
                                                 <div class="checkout-cart-item__action">
-                                                    <img src="./assets/icons/delete.svg" class="icon icon--grey" alt="">
+                                                    <img src="./assets/icons/delete.svg" class="icon icon--grey js-toggle" toggle-target="#dialog-delete" alt="">
                                                     <span class="checkout-cart-item__action-text">Delete</span>
                                                 </div>
                                             </div>
@@ -240,7 +244,7 @@
                                                     <span class="checkout-cart-item__action-text">Save</span>
                                                 </div>
                                                 <div class="checkout-cart-item__action">
-                                                    <img src="./assets/icons/delete.svg" class="icon icon--grey" alt="">
+                                                    <img src="./assets/icons/delete.svg" class="icon icon--grey js-toggle" toggle-target="#dialog-delete" alt="">
                                                     <span class="checkout-cart-item__action-text">Delete</span>
                                                 </div>
                                             </div>
@@ -299,6 +303,71 @@
                  cartDropDown.classList.add("cart-dropdown--active")
             }
         </script>
+        <div class="dialog" id="dialog-delete" >
+            <div class="dialog__box">
+                <p class="dialog__message">Bạn có chắc muốn xóa sản phẩm này khỏi giỏ hàng?</p>
+                <div class="dialog__bottom">
+                    <button class="btn btn--normal dialog__btn js-toggle" toggle-target="#dialog-delete">Cancel</button>
+                    <button class="btn btn--primary js-toggle" toggle-target="#dialog-delete">Confirm</button>
+                </div>
+            </div>
+            <div class="dialog__shadow js-toggle" toggle-target="#dialog-delete"></div>
+        </div>
+
+        
+        <!-- Dialog form address -->
+        <div class="dialog dialog-form hide" id="form-address">
+            <div action="" class="dialog-form__box" >
+                <h3 class="dialog-form__heading">Add new shipping address</h3>
+                <div class="row g-3 dialog-form__row">
+                    <div class="col col-xxl-6 col-md-12">
+                        <div class="dialog-form__group">
+                            <label for="" class="dialog-form__label">Name</label>
+                            <input type="text" name="" class="dialog-form__input" placeholder="Name" id="">
+                        </div>
+                    </div>
+                    <div class="col col-xxl-6 col-md-12">
+                        <div class="dialog-form__group">
+                            <label for="" class="dialog-form__label">Phone</label>
+                            <input type="tel" name="" class="dialog-form__input" placeholder="Phone" id="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row dialog-form__row">
+                    <div class="col col-12">
+                        <div class="dialog-form__group">
+                            <label for="" class="dialog-form__label">Address</label>
+                            <textarea name="" class="dialog-form__input dialog-form__textarea" placeholder="Address(Area and street)" id=""></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row dialog-form__row">
+                    <div class="col col-12">
+                        <div class="dialog-form__group">
+                            <label for="" class="dialog-form__label">City/District/Town</label>
+                            <input type="text" name="" class="dialog-form__input" id="" placeholder="City/District/Town">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-12">
+                        <div class="dialog-form__checkbox-row">
+                            <label class="checkout-shipping__check-address checkout-shipping__check-address--grey "><input type="checkbox" class="checkout-shipping__check-address-input" name="" id="default-address" ></label>
+                            <label for="default-address" class="dialog-form__checkbox-label">Set as default address</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-12">
+                        <div class="dialog-form__checkbox-row dialog-form__bottom">
+                            <button class="btn btn--normal js-toggle dialog-form__text" toggle-target="#form-address">Cancel</button>
+                            <button class="btn btn--primary js-toggle" toggle-target="#form-address">Create</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dialog__shadow js-toggle" toggle-target="#form-address"></div>
+        </div>
         <script type="module" src="./assets/js/scripts.js"></script>
     </body>
 </html>

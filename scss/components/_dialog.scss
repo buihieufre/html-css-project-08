@@ -1,0 +1,134 @@
+%fill-scr {
+    position: fixed;
+    inset: 0;
+}
+
+.dialog  {
+    @extend %fill-scr;
+    width: 100%;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    &__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        z-index: 1;
+        max-width: min(400px, 100% - 50px);
+        min-height: 200px;
+        padding: 20px;
+        border-radius: 20px;
+        background: var(--dialog-bg);
+        box-shadow: 0px 40px 90px 20px var(--dialog-shadow);
+    }
+
+    &__message {
+        font-size: 18px;
+        line-height: 1.5;
+        font-weight: 500;
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        align-self: flex-end
+    }
+
+    &__btn {
+        color: var(--dialog-btn-color)
+    }
+
+    &__shadow {
+        @extend %fill-scr;
+        background: rgba($color: #000000, $alpha: 0.5);
+    }
+
+    /////////////////////
+
+    &-form {
+        opacity: 0;
+        visibility: hidden;
+    }
+    &-form__box{
+        position: relative;
+        z-index: 1;
+        max-width: min(700px, 100% - 50px);
+        padding: 30px;
+        border-radius: 20px;
+        flex:1 0; 
+        background: var(--dialog-bg);
+        box-shadow: var(--dialog-shadow);
+    }
+
+    &-form__heading{
+        margin-bottom: 20px;
+        color: var(--dialog-text);
+        font-size: 22px;
+        font-weight: 700;
+    }
+
+    &-form__row  +  &-form__row{
+        margin-top: 30px;
+    }
+
+    &-form__group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &-form__label {
+        color: var(--dialog-text);
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 1.44; /* 144.444% */
+    }
+
+    &-form__input {
+        padding: 12px;
+        max-height: 45px;
+        border-radius: 10px;
+        border: 1px solid var(--dialog-input-border);
+        color: var(--dialog-input-color);
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 1.44; /* 144.444% */
+    }
+
+    &-form__input::placeholder {
+        color: var(--dialog-input-placeholder);
+    }
+
+    &-form__textarea {
+        max-height: 100px;
+        height: 100px;
+    }
+
+    &-form__checkbox-row {
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    &-form__checkbox-label {
+        color: var(--dialog-checkbox-label);
+    }
+
+    &-form__bottom {
+        justify-content: flex-end;
+    }
+
+    &-form__text {
+        color: var(--dialog-text);
+    }
+
+}
+
+.show {
+    visibility: visible;
+    opacity: 1;
+}

@@ -1,0 +1,102 @@
+@use "../abstracts";
+
+.credit-card {
+
+    &-list{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        
+        @include abstracts.screen(lg){
+            gap: 16px;
+        }
+    }
+
+    &-item {
+        height: 174px;
+        width: 100%;
+        padding: 20px;
+        min-width: 281px;
+        border-radius: 10px;
+        background: #1E2E69;
+    }
+
+    &-item-second {
+        background: #354151;;
+    }
+
+    &-item__brand{
+        display: flex;
+        align-items: center;
+        column-gap: 6px;
+    }
+
+    &-item__heading {
+        color: var(--profile-credit-card-text, #FFF);
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 1.42; /* 142.857% */
+    }
+
+    &__number {
+        margin-top: 37px;
+        color: var(--profile-credit-card-text, #FFF);
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.44; /* 144.444% */
+    }
+
+    &-info {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    &-info__expired-date {
+        margin-left: 40px;
+    }
+
+    &__subheading{
+        color: var(--profile-credit-card-text, #FFF);
+        font-size: 0.8rem;
+        font-weight: 500;
+        line-height: 1.75; /* 175% */
+    }
+
+    &__subcontent{
+        color: var(--profile-credit-card-text, #FFF);
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.4; /* 140% */
+    }
+
+    &__master-card-thumb{
+        margin-left: auto;
+    }
+
+    // Add card
+    &__add{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        background: none;
+        border-radius: 10px;
+        border: 1px dashed var(--profile-credit-card-border, #D2D1D6);
+        cursor: pointer;
+    }
+
+    &__add-icon {
+        width: 24px;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+
+    &__add-cta-text {
+        color: var(--profile-credit-card-border, #D2D1D6);
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 1.42; /* 142.857% */
+    }
+}

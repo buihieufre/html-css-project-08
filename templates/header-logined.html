@@ -4,7 +4,7 @@
             <img src="./assets/icons/more.svg" alt="" class="icon top-bar__more-icon" />
         </div>
 
-        <a href="./" class="logo">
+        <a href="./index-logined.html" class="logo">
             <img src="./assets/icons/logo.svg" alt="" class="logo__img" />
             <h2 class="logo__text">grocerymart</h2>
         </a>
@@ -12,12 +12,12 @@
             <button class="js-toggle d-none d-lg-block" toggle-target="#navbar">
                 <img src="../assets/icons/navbar-close.svg" alt="" class="navbar-inner-close-btn d-lg-block icon">
             </button>
-            <a href="#!" class="nav-btn d-none d-md-flex">
+            <a href="./checkout.html" class="nav-btn d-none d-md-flex">
                 <img src="../assets/icons/cart.svg" alt="" class="icon">
                 <span class="nav-btn__card">Card</span>
                 <span class="nav-btn__stats">3</span>
             </a>
-            <a href="#!" class="nav-btn d-none d-md-flex">
+            <a href="./favourite.html" class="nav-btn d-none d-md-flex">
                 <img src="../assets/icons/heart.svg" alt="" class="icon">
                 <span class="nav-btn__card">Favorite</span>
                 <span class="nav-btn__stats">3</span>
@@ -4223,9 +4223,40 @@
                 </button>
             </div>
             <ul class="top-act__group top-act__group-right d-md-none js-dropdown-list">
-                <li class="top-act__btn">
+                <li class="top-act__btn cart-btn ">
                     <img src="./assets/icons/heart.svg" alt="" class="top-act__icon icon" />
                     <span class="top-act__text">03</span>
+                    <div class="cart-dropdown-outer">
+                        <div class="cart-dropdown">
+                            <div class="cart-dropdown-row cart-dropdown-row--between">
+                                <h3 class="cart-dropdown__heading">You have 3 item(s)</h3>
+                                <a href="./favourite.html" class="cart-dropdown__all-product">See All</a>
+                            </div>
+                            <div class="cart-dropdown-row cart-dropdown__products">
+                                <div class="cart-dropdown__product">
+                                    <img src="./assets/images/product/product-item-2.png" alt="" class="cart-dropdown__product-img">
+                                    <h5 class="cart-dropdown__product-heading">Lavazza Coffee Blends </h5>
+                                    <p class="cart-dropdown__product-price">$329.00</p>
+                                </div>
+                                <div class="cart-dropdown__product">
+                                    <img src="./assets/images/product/product-item-1.png" alt="" class="cart-dropdown__product-img">
+                                    <h5 class="cart-dropdown__product-heading">Lavazza Coffee Blends </h5>
+                                    <p class="cart-dropdown__product-price">$329.00</p>
+                                </div>
+                                <div class="cart-dropdown__product">
+                                    <img src="./assets/images/product/product-item-4.png" alt="" class="cart-dropdown__product-img">
+                                    <h5 class="cart-dropdown__product-heading">Lavazza Coffee Blends </h5>
+                                    <p class="cart-dropdown__product-price">$329.00</p>
+                                </div>
+                            </div>
+                            <div class="cart-dropdown-horizontal-line"></div>
+                            <div class="cart-dropdown-row">
+                                <button class="cart-dropdown__checkout btn">
+                                    Check Out All
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </li>
                 <li class="top-act__seperator"></li>
                 <li class="top-act__btn cart-btn ">
@@ -4234,8 +4265,8 @@
                     <div class="cart-dropdown-outer">
                         <div class="cart-dropdown">
                             <div class="cart-dropdown-row cart-dropdown-row--between">
-                                <h3 class="cart-dropdown__heading">You have 3 item</h3>
-                                <a href="" class="cart-dropdown__all-product">See All</a>
+                                <h3 class="cart-dropdown__heading">You have 3 item(s)</h3>
+                                <a href="./checkout.html" class="cart-dropdown__all-product">See All</a>
                             </div>
                             <div class="cart-dropdown-row cart-dropdown__products">
                                 <div class="cart-dropdown__product">
@@ -4283,8 +4314,40 @@
                     </div>
                 </li>
             </ul>
-            <div class="top-act__user">
+            <div class="top-act__user js-toggle" toggle-target="#top-act-drop-down">
                 <img src="./assets/images/user/user.png" alt="" class="top-act__avt" />
+                <div class="top-act-drop-down hide" id="top-act-drop-down">
+                    <img src="../assets/icons/arrow-up.png" class="top-act-drop-down__arrow" alt="">
+                    <div class="top-act-drop-down__top">
+                        <img src="./assets/images/user/user.png" alt="" class="top-act__avt top-act-drop-down__avt ">
+                        <div class="top-act-drop-down__info">
+                            <h3 class="top-act__user-name">John Smith</h3>
+                            <p class="top-act__user-email">@johnsmith</p>
+                        </div>
+                    </div>
+                    <ul class="top-act-drop-down__options">
+                        <li class="top-act-drop-down__option">
+                            <a href="./profile-personalInfo.html" class="top-act-drop-down__option">Profile</a>
+                        </li>
+                        <li class="top-act-drop-down__option">
+                            <a href="./favourite.html" class="top-act-drop-down__option">Favourite list</a>
+                        </li>
+                        <li class="top-act-drop-down__seperator">
+                        </li>
+                        <li class="top-act-drop-down__option" id="toggle-theme">
+                            <button href="./profile-personalInfo.html" class="top-act-drop-down__option">Dark Mode</button>
+                            <i class="fa-solid fa-gear icon"></i>
+                        </li>
+                        <li class="top-act-drop-down__option">
+                            <a href="#!" class="top-act-drop-down__option">Profile</a>
+                        </li>
+                        <li class="top-act-drop-down__seperator">
+                        </li>
+                        <li class="top-act-drop-down__option">
+                            <a href="./index.html" class="top-act-drop-down__option">Logout</a>
+                        </li> 
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

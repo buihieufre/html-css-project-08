@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Grocerymart | Account</title>
+        <!-- Favicon link -->
+        <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+        <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+        <!-- fontawesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer" />
+        <!-- Fonts -->
+        <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+        <!-- Scripts -->
+        <script src="./assets/js/scripts.js"></script>
+        <!-- CSS -->
+        <link rel="stylesheet" href="./assets/css/main.css" />
+    </head>
+
+    <body>
+        <!-- Header -->
+        <header id="header" class="header"></header>
+        <script>
+            load("#header", "./templates/header-logined.html");
+        </script>
+        <main class="product profile">
+            <div class="container">
+                <div class="profile-container">
+                    <div class="search-bar">
+                        <input type="text" class="search-bar__input" placeholder="Search for item">
+                        <img src="./assets/icons/search.svg" class="search-bar__icon icon" alt="">
+                    </div>
+                    <div class="profile__left-side-bar">
+                        <div class="profile-avatar">
+                            <div class="profile-avatar__thumb-wrapper"><img src="./assets/images/user/user.png" alt="" class="profile-avatar__thumb"></div>
+                            <h3 class="profile__username">Imran Khan</h3>
+                            <p class="profile__reg-day">Registered: 17th May 2022</p>
+                        </div>
+                        <ul class="profile__management-items">
+                            <li class="profile-management-item">
+                                <h4 class="profile-management-item__heading">Manage Account</h4>
+                                <ul class="profile-management-item-details">
+                                    <li class="profile-management-item-detail">
+                                        <img src="./assets/icons/personalInfo.svg" alt="" class="profile-management-item-detail__icon">
+                                        <span class="profile-management-item-detail__text">Personal info</span>
+                                    </li>
+                                    <li class="profile-management-item-detail">
+                                        <img src="./assets/icons/location.svg" alt="" class="profile-management-item-detail__icon">
+                                        <span class="profile-management-item-detail__text">Address</span>
+                                    </li>
+                                    <li class="profile-management-item-detail">
+                                        <img src="./assets/icons/message.svg" alt="" class="profile-management-item-detail__icon">
+                                        <span class="profile-management-item-detail__text">Communications & privacy</span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="profile-management-item">
+                                <h4 class="profile-management-item__heading">My items</h4>
+                                <ul class="profile-management-item-details">
+                                    <li class="profile-management-item-detail">
+                                        <img src="./assets/icons/install.svg" alt="" class="profile-management-item-detail__icon">
+                                        <span class="profile-management-item-detail__text">Reorder</span>
+                                    </li>
+                                    <li class="profile-management-item-detail">
+                                        <img src="./assets/icons/heart.svg" alt="" class="profile-management-item-detail__icon">
+                                        <span class="profile-management-item-detail__text">Lists</span>
+                                    </li>
+                                    <li class="profile-management-item-detail">
+                                        <img src="./assets/icons/gift-small.svg" alt="" class="profile-management-item-detail__icon">
+                                        <span class="profile-management-item-detail__text">Registries</span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="profile-management-item">
+                                <h4 class="profile-management-item__heading">Subscriptions & plans</h4>
+                                <ul class="profile-management-item-details">
+                                    <li class="profile-management-item-detail">
+                                        <img src="./assets/icons/protect.svg" alt="" class="profile-management-item-detail__icon">
+                                        <span class="profile-management-item-detail__text">Protection plans</span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="profile-management-item">
+                                <h4 class="profile-management-item__heading">Customer Service</h4>
+                                <ul class="profile-management-item-details">
+                                    <li class="profile-management-item-detail">
+                                        <img src="./assets/icons/help.svg" alt="" class="profile-management-item-detail__icon">
+                                        <span class="profile-management-item-detail__text">Help</span>
+                                    </li>
+                                    <li class="profile-management-item-detail">
+                                        <img src="./assets/icons/alert.svg" alt="" class="profile-management-item-detail__icon">
+                                        <span class="profile-management-item-detail__text">Terms of Use</span>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="profile__content">
+                        <section class="profile-info-section credit-card">
+                            <h2 class="profile-info__heading">My Wallet</h2>
+                            <p class="profile-info__desc">Payment methods</p>
+                            <ul class="credit-card-list profile-card-list">
+                                <li class="credit-card-item">
+                                    <div class="credit-card-item__brand">
+                                        <img src="./assets/icons/plane-card.svg" alt="" class="credit-card-item__icon">
+                                        <h3 class="credit-card-item__heading">FeatherCard</h3>
+                                    </div>
+                                    <p class="credit-card__number">1234 4567 8901 2221</p>
+                                    <div class="credit-card-info">
+                                        <div class="credit-card-info__section ">
+                                            <h4 class="credit-card__subheading">Card Holder</h4>
+                                            <span class="credit-card__subcontent">Imran Khan</span>
+                                        </div>
+                                        <div class="credit-card-info__section credit-card-info__expired-date">
+                                            <h4 class="credit-card__subheading">Expired</h4>
+                                            <span class="credit-card__subcontent">10/22</span>
+                                        </div>
+                                        <img src="./assets/icons/master-card.svg" alt="" class="credit-card__master-card-thumb">
+                                    </div>
+                                </li>
+                                <li class="credit-card-item credit-card-item-second">
+                                    <div class="credit-card-item__brand">
+                                        <img src="./assets/icons/feather-card.svg" alt="" class="credit-card-item__icon">
+                                        <h3 class="credit-card-item__heading">FeatherCard</h3>
+                                    </div>
+                                    <p class="credit-card__number">1234 4546 1584 5552</p>
+                                    <div class="credit-card-info">
+                                        <div class="credit-card-info__section ">
+                                            <h4 class="credit-card__subheading">Card Holder</h4>
+                                            <span class="credit-card__subcontent">Bui Hieu</span>
+                                        </div>
+                                        <div class="credit-card-info__section credit-card-info__expired-date">
+                                            <h4 class="credit-card__subheading">Expired</h4>
+                                            <span class="credit-card__subcontent">11/22</span>
+                                        </div>
+                                        <img src="./assets/icons/master-card.svg" alt="" class="credit-card__master-card-thumb">
+                                    </div>
+                                </li>
+                                <li class="credit-card-item credit-card__add">
+                                    <img src="./assets/icons/add-btn.svg" class="credit-card__add-icon icon" alt="">
+                                    <p class="credit-card__add-cta-text">Add New Card</p>
+                                </li>
+                            </ul>
+                        </section>
+                        <section class="profile-info-section">
+                            <h2 class="profile-info__heading">Account info</h2>
+                            <p class="profile-info__desc">Addresses, contact information and password</p>
+                            <ul class="profile-account-info-list">
+                                <li class="profile-account-info-item">
+                                    <div class="profile-account-info-item__icon-wrapper"><img src="./assets/icons/message.svg" alt="" class="profile-account-info-item__icon icon"></div>
+                                    <div class="profile-account-info-item__content">
+                                        <h3 class="profile-account-info-item__heading">Email Address</h3>
+                                        <p class="profile-account-info-item__desc">tarek97.ta@gmail.com</p>
+                                    </div>
+                                </li>
+                                <li class="profile-account-info-item">
+                                    <div class="profile-account-info-item__icon-wrapper"><img src="./assets/icons/phone.svg" alt="" class="profile-account-info-item__icon icon"></div>
+                                    <div class="profile-account-info-item__content">
+                                        <h3 class="profile-account-info-item__heading">Phone number</h3>
+                                        <p class="profile-account-info-item__desc">+000 11122 2345 657</p>
+                                    </div>
+                                </li>
+                                <li class="profile-account-info-item">
+                                    <div class="profile-account-info-item__icon-wrapper"><img src="./assets/icons/location.svg" alt="" class="profile-account-info-item__icon icon"></div>
+                                    <div class="profile-account-info-item__content">
+                                        <h3 class="profile-account-info-item__heading">Add an address</h3>
+                                        <p class="profile-account-info-item__desc">Bangladesh Embassy, Washington, DC 20008</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </section>
+                        <section class="profile-info-section">
+                            <h2 class="profile-info__heading">Bought item</h2>
+                            <p class="profile-info__desc">2 items - Primary</p>
+                            <ul class="profile-bought-items">
+                                <li class="profile-bought-item">
+                                    <img src="./assets/images/product/product-item-4.png" alt="" class="profile-bought-item__thumb">
+                                    <div class="profile-bought-item__content">
+                                        <h4 class="profile-bought-item__heading">Coffee Beans - Espresso Arabica and Robusta Beans</h4>
+                                        <div class="profile-bought-item__row">
+                                            <span class="profile-bought-item__price">$47.00</span>
+                                            <button class="btn btn--rounded">Add to cart</button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="profile-bought-item__seperator"></li>
+                                <li class="profile-bought-item">
+                                    <img src="./assets/images/product/product-item-3.png" alt="" class="profile-bought-item__thumb">
+                                    <div class="profile-bought-item__content">
+                                        <h4 class="profile-bought-item__heading">Lavazza Coffee Blends - Try the Italian Espresso</h4>
+                                        <div class="profile-bought-item__row">
+                                            <span class="profile-bought-item__price">$50.00</span>
+                                            <button class="btn btn--rounded">Add to cart</button>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer id="footer"></footer>
+        <a href="#" class="go-to-top" id="go-to-top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
+        <script>
+            load("#footer", "./templates/footer.html");
+        </script>
+        <script>
+            const filterSizeList = $$("input[name='filter-size']");
+            const filterSizeBtn = $$(".filter-size-opt");
+            filterSizeBtn.forEach(function (e) {
+                e.addEventListener("click", function () {
+                    for (var i = 0; i < filterSizeBtn.length; i++) {
+                        if (
+                            filterSizeBtn[i].classList.contains("filter-size-opt--active") &&
+                            filterSizeList[i].checked == true
+                        ) {
+                            filterSizeBtn[i].classList.remove("filter-size-opt--active");
+                        }
+                    }
+                    e.classList.add("filter-size-opt--active");
+                });
+            });
+
+            const filterBrandList = $$("input[name='filter-brand']");
+            const filterBrandBtn = $$(".filter-brand-option");
+            filterBrandBtn.forEach(function (e) {
+                e.addEventListener("click", function () {
+                    for (var i = 0; i < filterSizeBtn.length; i++) {
+                        if (
+                            filterBrandBtn[i].classList.contains("filter-size-opt--active") &&
+                            filterBrandList[i].checked == true
+                        ) {
+                            filterBrandBtn[i].classList.remove("filter-size-opt--active");
+                        }
+                    }
+                    e.classList.add("filter-size-opt--active");
+                });
+            });
+            // Filter display
+            const filterBtn = $(".home-filter");
+            const cancelFilterBtn = $(".filter-cancel");
+            const filterDropdown = $(".filter");
+            console.log(filterBtn);
+            console.log(filterDropdown);
+            filterBtn.addEventListener("click", () => {
+                filterDropdown.classList.toggle("filter-hidden");
+                filterDropdown.scrollIntoView({ block: "end", behavior: "smooth" });
+            });
+            cancelFilterBtn.onclick = (e) => {
+                e.preventDefault();
+            };
+            cancelFilterBtn.addEventListener("click", () => {
+                filterDropdown.classList.toggle("filter-hidden");
+                filterDropdown.scrollIntoView({ block: "end", behavior: "smooth" });
+            });
+            // Add to love list
+            const loveList = $$(".product-item__heart-wrapper");
+            loveList.forEach((item) => {
+                item.addEventListener("click", () => {
+                    item.classList.toggle("product-item__heart-wrapper--actived");
+                });
+            });
+        </script>
+    </body>
+</html>

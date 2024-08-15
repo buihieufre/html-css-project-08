@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Grocerymart</title>
+        <title>Checkout | Grocerymart</title>
         <!-- Favicon link -->
         <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
@@ -89,7 +89,7 @@
                                                     <span class="checkout-cart-item__action-text">Save</span>
                                                 </div>
                                                 <div class="checkout-cart-item__action">
-                                                    <img src="./assets/icons/delete.svg" class="icon icon--grey" alt="">
+                                                    <img src="./assets/icons/delete.svg" class="icon icon--grey js-toggle" toggle-target="#dialog-delete" alt="">
                                                     <span class="checkout-cart-item__action-text">Delete</span>
                                                 </div>
                                             </div>
@@ -137,7 +137,7 @@
                                                     <span class="checkout-cart-item__action-text">Save</span>
                                                 </div>
                                                 <div class="checkout-cart-item__action">
-                                                    <img src="./assets/icons/delete.svg" class="icon icon--grey" alt="">
+                                                    <img src="./assets/icons/delete.svg" class="icon icon--grey js-toggle" toggle-target="#dialog-delete" alt="">
                                                     <span class="checkout-cart-item__action-text">Delete</span>
                                                 </div>
                                             </div>
@@ -185,7 +185,7 @@
                                                     <span class="checkout-cart-item__action-text">Save</span>
                                                 </div>
                                                 <div class="checkout-cart-item__action">
-                                                    <img src="./assets/icons/delete.svg" class="icon icon--grey" alt="">
+                                                    <img src="./assets/icons/delete.svg" class="icon icon--grey js-toggle" toggle-target="#dialog-delete" alt="">
                                                     <span class="checkout-cart-item__action-text">Delete</span>
                                                 </div>
                                             </div>
@@ -260,5 +260,16 @@
             load("#footer", "./templates/footer.html");
         </script>
         <script src="./assets/js/scripts.js" type="module"></script>
+
+        <div class="dialog hide" id="dialog-delete" >
+            <div class="dialog__box">
+                <p class="dialog__message">Bạn có chắc muốn xóa sản phẩm này khỏi giỏ hàng?</p>
+                <div class="dialog__bottom">
+                    <button class="btn btn--normal dialog__btn js-toggle" toggle-target="#dialog-delete">Cancel</button>
+                    <button class="btn btn--primary js-toggle" toggle-target="#dialog-delete">Confirm</button>
+                </div>
+            </div>
+            <div class="dialog__shadow js-toggle" toggle-target="#dialog-delete"></div>
+        </div>
     </body>
 </html>

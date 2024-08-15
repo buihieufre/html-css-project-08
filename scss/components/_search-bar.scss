@@ -1,0 +1,27 @@
+@use "../abstracts";
+
+.search-bar {
+    display: none;
+    align-items: center;
+    width: 100%;
+    padding: 13px 15px;
+    border-radius: 10px;
+    background: var(--search-bar-bg);
+    @include abstracts.screen(lg){
+        display: flex;
+    }
+
+    &__input {
+        color: var(--search-bar-text);
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 1.42; /* 142.857% */
+        flex: 1;
+        &::placeholder {
+            color: var(--search-bar-placeholder);
+        }
+    }
+    &__icon {
+        cursor: pointer;
+    }
+}

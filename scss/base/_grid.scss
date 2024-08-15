@@ -92,7 +92,7 @@ $gutters: (
 }
 
 @mixin make-offsets($infix: null) {
-    @for $i from 1 through $grid-column {
+    @for $i from 0 through $grid-column {
         .offset#{$infix}-#{$i} {
             margin-left: if($i >0, math.div(100%, $grid-column) * $i, 0);
         }

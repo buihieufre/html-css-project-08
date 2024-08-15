@@ -1,0 +1,60 @@
+.text-content {
+    font-size: 1.6rem;
+    
+    h1, h2, h3, h4, h5, h6, blockquote, p, hr, ul, li, img {
+        margin: 30px 0;
+    }
+
+    h1, h2,h3,h4,h5,h6 {
+        font-weight: 600;
+    }
+    
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    h2 {
+        font-size: 2.0rem;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+    }
+
+    h4 {
+        font-size: 1.6rem;
+    }
+
+    h5 {
+        font-size: 1.4rem;
+    }
+
+    h6 {
+        font-size: 1.2rem;
+    }
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+    }
+
+    img + em {
+        font-style: italic;
+        display: block;
+        text-align: center;
+    }
+
+    blockquote {
+        padding: 30px;
+        background: #EEE;
+        border-left: 2px solid orange;
+        background: rgba($color: orange, $alpha: 0.1);
+    }
+
+    a {
+        color: orange;
+        text-decoration: underline;
+    }
+}   

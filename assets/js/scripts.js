@@ -242,3 +242,52 @@ if(dropdownCartItems){
     })
 }
 
+
+// Hanle product detail tab-content
+const prodTabItems = $$('.product-detail-info-cate__block')
+const prodTabContents = $$('.product-detail-info-cate-content')
+const prodTabItemActiveClass = 'product-tab--actived'
+const prodTabContentActiveClass = 'product-tab-content--actived'
+let previousActivedIndex = 0;
+if(prodTabItems && prodTabContents ){
+    prodTabItems.forEach((item, index) => {
+        item.onclick = () =>{
+            prodTabItems[previousActivedIndex].classList.toggle(prodTabItemActiveClass)
+            prodTabContents[previousActivedIndex].classList.toggle(prodTabContentActiveClass)
+            previousActivedIndex = index
+            item.classList.toggle(prodTabItemActiveClass)
+            prodTabContents[index].classList.toggle(prodTabContentActiveClass)
+        }
+    })
+}
+
+const checkInputs = $$('.checkout-shipping__check-address');
+console.log(checkInputs)
+let previousCheckIndex  = 0;
+if(checkInputs){
+    Array.from(checkInputs).forEach((item, index) => {
+        item.onclick = ()=>{
+            const input = item.querySelector('input')
+            if(input){
+                checkInputs[previousCheckIndex]?.querySelector('input').classList.remove('checkout-shipping__check-address-input--checked')
+                previousCheckIndex = index;
+                input.classList.add('checkout-shipping__check-address-input--checked');
+            } 
+        }
+    })
+}
+
+
+const toggleTheme = $('#toggle-theme')
+if(toggleTheme){
+    toggleTheme.onclick = () =>{
+        const innerButton = toggleTheme.querySelector('.top-act-drop-down__option')
+        if(toggleTheme?.closest('html').matches('.dark')){
+            innerButton.innerText = 'Dark Mode'
+        }else{
+            innerButton.innerText = 'Light Mode'
+        }
+        toggleTheme?.closest('html').classList.toggle('dark')
+        
+    }
+}

@@ -11,6 +11,8 @@ html.dark {
     --top-act-seperator-bg-color: #ededf6;
     --top-act-avt-shadow: rgba(0, 0, 0, 0.08);
 
+    --top-act-drop-down-text: #f6f6f6 ;
+    --top-act-drop-down-arrow : brightness(0) saturate(100%) invert(13%) sepia(8%) saturate(3064%) hue-rotate(191deg) brightness(92%) contrast(85%);
     // Dropdown
     @include abstracts.screen(lg) {
     --header-shadow: rgba(0, 0, 0, 0.20);
@@ -137,6 +139,7 @@ html.dark {
     --checkout-shipping-text:#B9BABE;
     --checout-shipping-seperator: #9E9DA8;
     --checkout-shipping-checkbox-border: #B9BABE;
+    --checkout-shipping-checkbox-border-grey: #827f87;
     --checkout-shipping-checkbox-bg: #67B044;
     --checkout-shipping-check-icon: #FFFFFF;
 
@@ -149,4 +152,35 @@ html.dark {
     --checkbox-payment-input-border: #EDEDF6;
     --checkbox-payment-input-placeholder: #EDEDF6;
     --checkbox-payment-detail-price-text: #B9BABE;
+
+    // profile
+    --profile-bg: #292E39;
+    --profile-text: #B9BABE;
+    --profile-user-text: #FAFAFD;
+    --profile-icon: brightness(0) saturate(100%) invert(83%) sepia(7%) saturate(104%) hue-rotate(191deg) brightness(89%) contrast(93%);
+    --profile-user-shadow: 0px 20px 60px 10px rgba(42, 42, 45, 0.095);
+    --profile-user-background-color: linear-gradient(180deg, rgba(26, 22, 46, 0.00) 0%, #1A162E 100%); 
+    --profile-section-bg: #171C28;
+    --profile-credit-card-text: #FFF;
+    --profile-credit-card-border: #D2D1D6;
+
+    --profile-account-info-item: #292E39;
+    --profile-bought-item-seperator-bg: #D2D1D6;
+    --profile-form-heading: #B9BABE;
+    --profile-form-checkbox-bg: #1A162E;
+    --profile-form-input-color: #737477;
+
+    //Search bar
+    --search-bar-bg: #171C28;
+    --search-bar-text: #FAFAFD;
+    --search-bar-placeholder: #9E9DA8;
+
+    // Dialog
+    --dialog-bg: #313441;
+    --dialog-shadow: rgba(2, 2, 2, 0.4);
+    --dialog-text: #fff;
+    --dialog-input-border:#D2D1D6;
+    --dialog-input-color:#1a162E;
+    --dialog-input-placeholder:#9E9DA8; 
+    --dialog-checkbox-label: #827f87;
 }

@@ -77,3 +77,11 @@ a {
   visibility: visible;
   opacity: 1;
 }
+
+i, em{
+  font-style: italic;
+}
+
+strong, b{
+  font-weight: 600;
+}
